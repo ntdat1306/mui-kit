@@ -1,0 +1,39 @@
+{
+    "name": "@datstack/mui-docs",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "next": "15.3.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@datstack/mui-themes": "workspace:*",
+        "@emotion/cache": "^11.14.0",
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.0",
+        "@eslint/eslintrc": "^3",
+        "@mdx-js/loader": "^3.1.0",
+        "@mdx-js/react": "^3.1.0",
+        "@mui/icons-material": "^7.0.2",
+        "@mui/material": "^7.0.2",
+        "@mui/material-nextjs": "^7.0.2",
+        "@mui/types": "^7.4.1",
+        "@mui/utils": "^7.0.2",
+        "@next/mdx": "^15.3.0",
+        "@types/mdx": "^2.0.13",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "15.3.0",
+        "react-use": "^17.6.0",
+        "typescript": "^5"
+    }
+}
