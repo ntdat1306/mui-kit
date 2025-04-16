@@ -1,14 +1,40 @@
 const menuImageBaseUrl = 'https://mui.com/static/material-ui/react-components';
 
+type MenuItem = {
+    label: string;
+    slug: string;
+    image?: string;
+};
+
+type Menu = {
+    group: string;
+    items: MenuItem[];
+};
+
+type Template = {
+    template: string;
+    menu: Menu[];
+};
+
 const getMenuItems = (template: string, mode?: 'light' | 'dark') => {
     if (!mode) {
         return [];
     }
 
-    const templates = [
+    const templates: Template[] = [
         {
             template: 'shadcn',
             menu: [
+                {
+                    group: '',
+                    items: [
+                        {
+                            label: 'All components',
+                            slug: '',
+                            image: '',
+                        },
+                    ],
+                },
                 {
                     group: 'Inputs',
                     items: [
@@ -72,11 +98,6 @@ const getMenuItems = (template: string, mode?: 'light' | 'dark') => {
                             slug: 'toggle-button',
                             image: `${menuImageBaseUrl}/toggle-button-${mode}.png`,
                         },
-                        {
-                            label: 'Typography',
-                            slug: 'typography',
-                            image: `${menuImageBaseUrl}/typography-${mode}.png`,
-                        },
                     ],
                 },
                 {
@@ -101,6 +122,21 @@ const getMenuItems = (template: string, mode?: 'light' | 'dark') => {
                             label: 'Divider',
                             slug: 'divider',
                             image: `${menuImageBaseUrl}/divider-${mode}.png`,
+                        },
+                        {
+                            label: 'Table',
+                            slug: 'table',
+                            image: `${menuImageBaseUrl}/table-${mode}.png`,
+                        },
+                        {
+                            label: 'Tooltip',
+                            slug: 'tooltip',
+                            image: `${menuImageBaseUrl}/tooltip-${mode}.png`,
+                        },
+                        {
+                            label: 'Typography',
+                            slug: 'typography',
+                            image: `${menuImageBaseUrl}/typography-${mode}.png`,
                         },
                     ],
                 },

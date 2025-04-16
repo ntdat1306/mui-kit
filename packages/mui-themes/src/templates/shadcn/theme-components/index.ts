@@ -1,6 +1,5 @@
 export { default as MuiAutocomplete } from './MuiAutocomplete';
 export { default as MuiButton } from './MuiButton';
-export { default as MuiPopper } from './MuiPopper';
 export { default as MuiPaper } from './MuiPaper';
 export { default as MuiPopover } from './MuiPopover';
 export { default as MuiCheckbox } from './MuiCheckbox';
@@ -15,3 +14,5 @@ export { default as MuiSwitch } from './MuiSwitch';
 export { default as MuiToggleButton } from './MuiToggleButton';
 export { default as MuiToggleButtonGroup } from './MuiToggleButtonGroup';
 export { default as MuiChip } from './MuiChip';
+export { default as MuiTable } from './MuiTable';
+export { default as MuiTooltip } from './MuiTooltip';

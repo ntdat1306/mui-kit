@@ -4,24 +4,24 @@ import {
     MuiButton,
     MuiCard,
     MuiCheckbox,
+    MuiChip,
     MuiFab,
     MuiPaper,
     MuiPopover,
-    MuiPopper,
     MuiRadio,
     MuiSelect,
     MuiSlider,
     MuiSwitch,
+    MuiTable,
     MuiTextField,
     MuiToggleButton,
     MuiToggleButtonGroup,
     MuiTypography,
-    MuiChip,
+    MuiTooltip,
 } from './theme-components';
 
 const themeComponents: ThemeComponents = {
     MuiPaper,
-    MuiPopper,
     MuiAutocomplete,
     MuiButton,
     MuiCheckbox,
@@ -37,6 +37,8 @@ const themeComponents: ThemeComponents = {
     MuiToggleButton,
     MuiToggleButtonGroup,
     MuiChip,
+    MuiTable,
+    MuiTooltip,
 };
 
 export default themeComponents;
