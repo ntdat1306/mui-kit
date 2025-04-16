@@ -6,7 +6,7 @@ const MuiPopover: MuiComponent<'MuiPopover'> = {
         paper: ({ theme }) => ({
             padding: 4,
             margin: '0.25rem 0',
-            boxShadow: (theme.vars || theme).customTokens.shadow.popover,
+            boxShadow: (theme.vars || theme).customTokens.shadow.md,
             border: `1px solid ${(theme.vars || theme).palette.divider}`,
             [`& .${listClasses.root}`]: {
                 padding: 0,

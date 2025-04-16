@@ -6,7 +6,7 @@ const MuiCheckbox: MuiComponent<'MuiCheckbox'> = {
         root: ({ theme }) => ({
             color: (theme.vars || theme).palette.primary.main,
             [`& .${svgIconClasses.root} path`]: {
-                boxShadow: (theme.vars || theme).customTokens.shadow.card,
+                boxShadow: (theme.vars || theme).customTokens.shadow.sm,
             },
         }),
     },

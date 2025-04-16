@@ -11,7 +11,7 @@ const MuiSwitch: MuiComponent<'MuiSwitch'> = {
             width: 36,
             height: 20,
             padding: 0,
-            boxShadow: (theme.vars || theme).customTokens.shadow.input,
+            boxShadow: (theme.vars || theme).customTokens.shadow.xs,
         }),
         switchBase: ({ theme }) => ({
             padding: 0,

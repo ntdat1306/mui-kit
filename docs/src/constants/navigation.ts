@@ -146,6 +146,42 @@ export const sidebarItems: SidebarItem[] = [
                     },
                 ],
             },
+            {
+                key: 'components-feedback',
+                subheader: 'Feedback',
+                menu: [
+                    {
+                        key: 'alert',
+                        label: 'Alert',
+                        slug: 'alert',
+                    },
+                    {
+                        key: 'backdrop',
+                        label: 'Backdrop',
+                        slug: 'backdrop',
+                    },
+                    {
+                        key: 'dialog',
+                        label: 'Dialog',
+                        slug: 'dialog',
+                    },
+                    {
+                        key: 'progress',
+                        label: 'Progress',
+                        slug: 'progress',
+                    },
+                    {
+                        key: 'skeleton',
+                        label: 'Skeleton',
+                        slug: 'skeleton',
+                    },
+                    {
+                        key: 'snackbar',
+                        label: 'Snackbar',
+                        slug: 'snackbar',
+                    },
+                ],
+            },
         ],
     },
 ];

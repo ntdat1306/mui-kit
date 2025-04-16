@@ -18,6 +18,11 @@ import {
     MuiToggleButtonGroup,
     MuiTypography,
     MuiTooltip,
+    MuiBackdrop,
+    MuiDialog,
+    MuiLinearProgress,
+    MuiSkeleton,
+    MuiSnackbarContent,
 } from './theme-components';
 
 const themeComponents: ThemeComponents = {
@@ -39,6 +44,11 @@ const themeComponents: ThemeComponents = {
     MuiChip,
     MuiTable,
     MuiTooltip,
+    MuiBackdrop,
+    MuiDialog,
+    MuiLinearProgress,
+    MuiSkeleton,
+    MuiSnackbarContent,
 };
 
 export default themeComponents;

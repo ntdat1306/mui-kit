@@ -7,14 +7,14 @@ const MuiChip: MuiComponent<'MuiChip'> = {
                 {
                     props: { variant: 'filled' },
                     style: {
-                        boxShadow: (theme.vars || theme).customTokens.shadow.card,
+                        boxShadow: (theme.vars || theme).customTokens.shadow.sm,
                     },
                 },
                 {
                     props: { variant: 'outlined' },
                     style: {
                         borderColor: (theme.vars || theme).palette.divider,
-                        boxShadow: (theme.vars || theme).customTokens.shadow.input,
+                        boxShadow: (theme.vars || theme).customTokens.shadow.xs,
                     },
                 },
             ],

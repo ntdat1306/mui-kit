@@ -7,7 +7,7 @@ const MuiTextField: MuiComponent<'MuiTextField'> = {
     },
     styleOverrides: {
         root: ({ theme }) => ({
-            boxShadow: (theme.vars || theme).customTokens.shadow.input,
+            boxShadow: (theme.vars || theme).customTokens.shadow.xs,
             variants: [
                 {
                     props: { variant: 'outlined' },

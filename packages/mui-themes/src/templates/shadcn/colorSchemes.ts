@@ -26,7 +26,7 @@ const themeColorSchemes: ColorSchemes = {
     dark: {
         palette: {
             primary: {
-                main: '#00a76f', // #00a76f || #18181b
+                main: '#00a76f', // #00a76f || #fafafa
             },
             secondary: {
                 main: '#27272a',

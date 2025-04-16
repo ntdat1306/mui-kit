@@ -12,13 +12,13 @@ const MuiButton: MuiComponent<'MuiButton'> = {
                 {
                     props: { variant: 'contained' },
                     style: {
-                        boxShadow: (theme.vars || theme).customTokens.shadow.card,
+                        boxShadow: (theme.vars || theme).customTokens.shadow.sm,
                     },
                 },
                 {
                     props: { variant: 'outlined' },
                     style: {
-                        boxShadow: (theme.vars || theme).customTokens.shadow.input,
+                        boxShadow: (theme.vars || theme).customTokens.shadow.xs,
                         borderColor: (theme.vars || theme).palette.divider,
                     },
                 },

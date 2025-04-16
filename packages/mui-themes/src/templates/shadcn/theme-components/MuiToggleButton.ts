@@ -32,7 +32,7 @@ const MuiToggleButton: MuiComponent<'MuiToggleButton'> = {
                     props: { variant: 'outline' },
                     style: {
                         border: `1px solid ${(theme.vars || theme).palette.divider}`,
-                        boxShadow: (theme.vars || theme).customTokens.shadow.input,
+                        boxShadow: (theme.vars || theme).customTokens.shadow.xs,
                     },
                 },
             ],
