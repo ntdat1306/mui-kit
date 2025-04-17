@@ -1,11 +1,19 @@
+type ItemChildrenMenu = {
+    key: string;
+    label: string;
+    slug: string;
+};
+
+type SidebarItemChildren = {
+    key: string;
+    subheader?: string;
+    menu: ItemChildrenMenu[];
+};
+
 export type SidebarItem = {
     key: string;
     label: string;
-    children: {
-        key: string;
-        subheader?: string;
-        menu: { key: string; label: string; slug: string }[];
-    }[];
+    children: SidebarItemChildren[];
 };
 
 export const sidebarItems: SidebarItem[] = [

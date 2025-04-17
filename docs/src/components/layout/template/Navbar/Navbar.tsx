@@ -18,7 +18,7 @@ const Navbar = ({ toggleMobileSidebar }: NavbarProps) => {
                 display: 'flex',
                 alignItems: 'center',
                 backdropFilter: 'blur(8px)',
-                zIndex: (theme.vars || theme).zIndex.appBar + 1,
+                zIndex: (theme.vars || theme).zIndex.appBar,
                 height: (theme.vars || theme).docs.navbarHeight,
                 padding: `0 ${(theme.vars || theme).docs.padding}`,
                 borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,

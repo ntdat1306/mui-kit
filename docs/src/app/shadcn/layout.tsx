@@ -11,7 +11,6 @@ const Layout = ({ children }: LayoutProps) => {
     return (
         <ThemeProvider theme={shadcnExtendTheme}>
             <CssBaseline />
-            {/* {children} */}
             <TemplateLayout>{children}</TemplateLayout>
         </ThemeProvider>
     );
