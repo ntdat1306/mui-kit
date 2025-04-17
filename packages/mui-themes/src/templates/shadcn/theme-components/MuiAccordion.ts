@@ -8,17 +8,15 @@ const MuiAccordion: MuiComponent<'MuiAccordion'> = {
     },
     styleOverrides: {
         root: ({ theme }) => ({
-            background: (theme.vars || theme).palette.background.default,
+            backgroundColor: (theme.vars || theme).palette.background.default,
             [`&.Mui-expanded, &:not(.Mui-expanded)`]: {
                 borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
                 '&:last-of-type': {
                     borderBottom: 0,
                 },
             },
-            [`&:not(.Mui-expanded)`]: {
-                '&::before': {
-                    opacity: 0,
-                },
+            [`&:not(.Mui-expanded)::before`]: {
+                opacity: 0,
             },
             [`& .${accordionSummaryClasses.root} .${typographyClasses.root}`]: {
                 fontWeight: 500,

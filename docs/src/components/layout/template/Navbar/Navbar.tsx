@@ -22,7 +22,7 @@ const Navbar = ({ toggleMobileSidebar }: NavbarProps) => {
                 height: (theme.vars || theme).docs.navbarHeight,
                 padding: `0 ${(theme.vars || theme).docs.padding}`,
                 borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
-                background: `rgba(${(theme.vars || theme).palette.background.defaultChannel} / 0.25)`,
+                backgroundColor: `rgba(${(theme.vars || theme).palette.background.defaultChannel} / 0.25)`,
             })}
         >
             <NavbarButton

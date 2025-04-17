@@ -9,14 +9,18 @@ import {
     MuiCheckbox,
     MuiChip,
     MuiDialog,
+    MuiDrawer,
     MuiFab,
     MuiLinearProgress,
+    MuiMenu,
+    MuiPagination,
     MuiPopover,
     MuiRadio,
     MuiSelect,
     MuiSkeleton,
     MuiSlider,
     MuiSnackbarContent,
+    MuiStepper,
     MuiSwitch,
     MuiTable,
     MuiTextField,
@@ -24,6 +28,7 @@ import {
     MuiToggleButtonGroup,
     MuiTooltip,
     MuiTypography,
+    MuiTabs,
 } from './theme-components';
 
 const themeComponents: ThemeComponents = {
@@ -51,6 +56,11 @@ const themeComponents: ThemeComponents = {
     MuiSnackbarContent,
     MuiAccordion,
     MuiAppBar,
+    MuiDrawer,
+    MuiMenu,
+    MuiPagination,
+    MuiStepper,
+    MuiTabs,
 };
 
 export default themeComponents;

@@ -208,6 +208,57 @@ export const sidebarItems: SidebarItem[] = [
                     },
                 ],
             },
+            {
+                key: 'components-navigation',
+                subheader: 'Navigation',
+                menu: [
+                    {
+                        key: 'bottom-navigation',
+                        label: 'Bottom Navigation',
+                        slug: 'bottom-navigation',
+                    },
+                    {
+                        key: 'breadcrumbs',
+                        label: 'Breadcrumbs',
+                        slug: 'breadcrumbs',
+                    },
+                    {
+                        key: 'drawer',
+                        label: 'Drawer',
+                        slug: 'drawer',
+                    },
+                    {
+                        key: 'link',
+                        label: 'Link',
+                        slug: 'link',
+                    },
+                    {
+                        key: 'menu',
+                        label: 'Menu',
+                        slug: 'menu',
+                    },
+                    {
+                        key: 'pagination',
+                        label: 'Pagination',
+                        slug: 'pagination',
+                    },
+                    {
+                        key: 'speed-dial',
+                        label: 'Speed Dial',
+                        slug: 'speed-dial',
+                    },
+                    {
+                        key: 'stepper',
+                        label: 'Stepper',
+                        slug: 'stepper',
+                    },
+                    {
+                        key: 'tabs',
+                        label: 'Tabs',
+                        slug: 'tabs',
+                    },
+                ],
+            },
         ],
     },
 ];

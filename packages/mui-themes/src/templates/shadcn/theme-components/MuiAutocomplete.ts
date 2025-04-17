@@ -15,8 +15,8 @@ const MuiAutocomplete: MuiComponent<'MuiAutocomplete'> = {
         },
         popper: ({ theme }) => ({
             margin: '0.25rem 0 !important',
-            boxShadow: (theme.vars || theme).customTokens.shadow.md,
             borderRadius: (theme.vars || theme).shape.borderRadius,
+            boxShadow: (theme.vars || theme).customTokens.shadow.md,
             border: `1px solid ${(theme.vars || theme).palette.divider}`,
         }),
     },

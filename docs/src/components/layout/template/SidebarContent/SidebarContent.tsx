@@ -27,7 +27,6 @@ const NestedList = (props: NestedListProps) => {
 
     const router = useRouter();
     const pathname = usePathname();
-    const [open, setOpen] = useState<boolean>(false);
 
     /**
      * /shadcn -> prefix = "", suffix = "shadcn"
@@ -35,20 +34,9 @@ const NestedList = (props: NestedListProps) => {
      */
     const names = pathname.split('/');
     const [prefix, suffix] = names.slice(-2);
+    const isMenuOpen = children.some((child) => child.menu.some((item) => item.slug === suffix));
 
-    const handleToggle = () => {
-        setOpen(!open);
-    };
-
-    const handleNavigate = (slug: string) => {
-        const path = prefix ? names.slice(0, names.length - 1).join('/') : pathname;
-
-        router.push(`${path}/${slug}`);
-
-        if (toggleMobileSidebar) {
-            toggleMobileSidebar();
-        }
-    };
+    const [open, setOpen] = useState<boolean>(isMenuOpen);
 
     const items = children.map((child) => (
         <Fragment key={child.key}>
@@ -72,6 +60,20 @@ const NestedList = (props: NestedListProps) => {
             ))}
         </Fragment>
     ));
+
+    const handleToggle = () => {
+        setOpen(!open);
+    };
+
+    const handleNavigate = (slug: string) => {
+        const path = prefix ? names.slice(0, names.length - 1).join('/') : pathname;
+
+        router.push(`${path}/${slug}`);
+
+        if (toggleMobileSidebar) {
+            toggleMobileSidebar();
+        }
+    };
 
     return (
         <>
@@ -127,7 +129,7 @@ const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
                 sx={(theme) => ({
                     flex: 1,
                     overflowY: 'auto',
-                    borderRight: `1px solid ${(theme.vars || theme).palette.divider}`,
+                    ...(!toggleMobileSidebar && { borderRight: `1px solid ${(theme.vars || theme).palette.divider}` }),
                 })}
             >
                 <List disablePadding sx={{ padding: '10px' }}>

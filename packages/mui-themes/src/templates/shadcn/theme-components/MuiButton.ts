@@ -18,8 +18,8 @@ const MuiButton: MuiComponent<'MuiButton'> = {
                 {
                     props: { variant: 'outlined' },
                     style: {
-                        boxShadow: (theme.vars || theme).customTokens.shadow.xs,
                         borderColor: (theme.vars || theme).palette.divider,
+                        boxShadow: (theme.vars || theme).customTokens.shadow.xs,
                     },
                 },
             ],

@@ -4,7 +4,7 @@ import { tooltipClasses } from '@mui/material';
 const MuiTooltip: MuiComponent<'MuiTooltip'> = {
     styleOverrides: {
         tooltip: ({ theme }) => ({
-            background: (theme.vars || theme).palette.primary.main,
+            backgroundColor: (theme.vars || theme).palette.primary.main,
         }),
         popper: {
             [`&.${tooltipClasses.popperInteractive} .${tooltipClasses.tooltip}`]: {

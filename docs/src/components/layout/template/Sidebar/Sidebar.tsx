@@ -10,7 +10,7 @@ const Sidebar = () => {
                 left: 0,
                 bottom: 0,
                 width: (theme.vars || theme).docs.sidebarWidth,
-                background: (theme.vars || theme).palette.background.default,
+                backgroundColor: (theme.vars || theme).palette.background.default,
                 display: { xs: 'none', lg: 'block' },
             })}
         >

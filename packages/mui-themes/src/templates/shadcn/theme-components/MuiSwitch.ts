@@ -40,7 +40,7 @@ const MuiSwitch: MuiComponent<'MuiSwitch'> = {
             color: (theme.vars || theme).palette.background.default,
         }),
         track: ({ theme }) => ({
-            borderRadius: '999px',
+            borderRadius: '9999px',
             backgroundColor: (theme.vars || theme).palette.divider,
             opacity: 1,
             transition: theme.transitions.create(['background-color'], {

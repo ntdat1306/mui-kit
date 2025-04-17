@@ -6,7 +6,7 @@ const MuiSnackbarContent: MuiComponent<'MuiSnackbarContent'> = {
             color: (theme.vars || theme).palette.text.primary,
             boxShadow: (theme.vars || theme).customTokens.shadow.lg,
             border: `1px solid ${(theme.vars || theme).palette.divider}`,
-            background: (theme.vars || theme).palette.background.default,
+            backgroundColor: (theme.vars || theme).palette.background.default,
         }),
     },
 };
