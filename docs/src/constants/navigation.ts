@@ -182,6 +182,32 @@ export const sidebarItems: SidebarItem[] = [
                     },
                 ],
             },
+            {
+                key: 'components-surfaces',
+                subheader: 'Surfaces',
+                menu: [
+                    {
+                        key: 'accordion',
+                        label: 'Accordion',
+                        slug: 'accordion',
+                    },
+                    {
+                        key: 'app-bar',
+                        label: 'App Bar',
+                        slug: 'app-bar',
+                    },
+                    {
+                        key: 'card',
+                        label: 'Card',
+                        slug: 'card',
+                    },
+                    {
+                        key: 'paper',
+                        label: 'Paper',
+                        slug: 'paper',
+                    },
+                ],
+            },
         ],
     },
 ];

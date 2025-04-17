@@ -1,3 +1,5 @@
+export { default as MuiAccordion } from './MuiAccordion';
+export { default as MuiAppBar } from './MuiAppBar';
 export { default as MuiAutocomplete } from './MuiAutocomplete';
 export { default as MuiBackdrop } from './MuiBackdrop';
 export { default as MuiButton } from './MuiButton';
@@ -7,7 +9,6 @@ export { default as MuiChip } from './MuiChip';
 export { default as MuiDialog } from './MuiDialog';
 export { default as MuiFab } from './MuiFab';
 export { default as MuiLinearProgress } from './MuiLinearProgress';
-export { default as MuiPaper } from './MuiPaper';
 export { default as MuiPopover } from './MuiPopover';
 export { default as MuiRadio } from './MuiRadio';
 export { default as MuiSelect } from './MuiSelect';

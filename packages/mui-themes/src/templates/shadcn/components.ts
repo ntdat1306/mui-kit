@@ -1,32 +1,32 @@
 import { ThemeComponents } from '@/types';
 import {
+    MuiAccordion,
+    MuiAppBar,
     MuiAutocomplete,
+    MuiBackdrop,
     MuiButton,
     MuiCard,
     MuiCheckbox,
     MuiChip,
+    MuiDialog,
     MuiFab,
-    MuiPaper,
+    MuiLinearProgress,
     MuiPopover,
     MuiRadio,
     MuiSelect,
+    MuiSkeleton,
     MuiSlider,
+    MuiSnackbarContent,
     MuiSwitch,
     MuiTable,
     MuiTextField,
     MuiToggleButton,
     MuiToggleButtonGroup,
-    MuiTypography,
     MuiTooltip,
-    MuiBackdrop,
-    MuiDialog,
-    MuiLinearProgress,
-    MuiSkeleton,
-    MuiSnackbarContent,
+    MuiTypography,
 } from './theme-components';
 
 const themeComponents: ThemeComponents = {
-    MuiPaper,
     MuiAutocomplete,
     MuiButton,
     MuiCheckbox,
@@ -49,6 +49,8 @@ const themeComponents: ThemeComponents = {
     MuiLinearProgress,
     MuiSkeleton,
     MuiSnackbarContent,
+    MuiAccordion,
+    MuiAppBar,
 };
 
 export default themeComponents;
