@@ -10,6 +10,7 @@ import {
     ListItemText,
     ListSubheader,
     Stack,
+    typographyClasses,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import { Fragment, useState } from 'react';
@@ -40,14 +41,21 @@ const NestedList = (props: NestedListProps) => {
 
     const items = children.map((child) => (
         <Fragment key={child.key}>
-            <ListSubheader sx={{ pl: 4 }}>{child.subheader}</ListSubheader>
+            <ListSubheader sx={{ paddingLeft: '2.5rem' }}>{child.subheader}</ListSubheader>
 
             {child.menu.map((item) => (
-                <ListItem key={`${child.key}-${item.key}`} disablePadding sx={{ pl: 2 }}>
+                <ListItem
+                    key={`${child.key}-${item.key}`}
+                    disablePadding
+                    sx={{
+                        paddingLeft: '2rem',
+                    }}
+                >
                     <ListItemButton
                         selected={item.slug === suffix}
                         onClick={() => handleNavigate(item.slug)}
                         sx={(theme) => ({
+                            padding: '0 0.5rem',
                             borderRadius: (theme.vars || theme).shape.borderRadius,
                             '&.Mui-selected': {
                                 color: (theme.vars || theme).palette.primary.main,
@@ -81,6 +89,7 @@ const NestedList = (props: NestedListProps) => {
                 onClick={handleToggle}
                 sx={(theme) => ({
                     borderRadius: (theme.vars || theme).shape.borderRadius,
+                    padding: '0 0.5rem',
                 })}
             >
                 <ListItemIcon
@@ -93,11 +102,27 @@ const NestedList = (props: NestedListProps) => {
                     {open ? <KeyboardArrowDown /> : <KeyboardArrowRight />}
                 </ListItemIcon>
 
-                <ListItemText primary={label} />
+                <ListItemText
+                    primary={label}
+                    sx={{
+                        [`& .${typographyClasses.root}`]: {
+                            fontWeight: 500,
+                        },
+                    }}
+                />
             </ListItemButton>
 
             <Collapse in={open} timeout='auto' unmountOnExit>
-                <List disablePadding>{items}</List>
+                <List
+                    disablePadding
+                    sx={{
+                        '& > * + *': {
+                            marginTop: '0.125rem',
+                        },
+                    }}
+                >
+                    {items}
+                </List>
             </Collapse>
         </>
     );
@@ -132,7 +157,12 @@ const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
                     ...(!toggleMobileSidebar && { borderRight: `1px solid ${(theme.vars || theme).palette.divider}` }),
                 })}
             >
-                <List disablePadding sx={{ padding: '10px' }}>
+                <List
+                    disablePadding
+                    sx={{
+                        padding: '10px',
+                    }}
+                >
                     {menu}
                 </List>
             </Box>

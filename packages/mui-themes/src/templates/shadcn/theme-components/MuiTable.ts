@@ -3,6 +3,7 @@ import { MuiComponent } from '@/types';
 const MuiTable: MuiComponent<'MuiTable'> = {
     styleOverrides: {
         root: ({ theme }) => ({
+            background: (theme.vars ||theme).palette.background.default,
             '& thead': {
                 '& tr': {
                     '& th, & td': {
@@ -35,10 +36,10 @@ const MuiTable: MuiComponent<'MuiTable'> = {
                 '& tr': {
                     '& th, & td': {
                         fontWeight: 500,
-                        borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
-                        backgroundColor: (theme.vars || theme).palette.secondary.main,
                         fontSize: theme.typography.fontSize,
-                        color: (theme.vars || theme).palette.text.primary,
+                        color: (theme.vars || theme).palette.secondary.contrastText,
+                        backgroundColor: (theme.vars || theme).palette.secondary.main,
+                        borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
                     },
                     '&:last-child td, &:last-child th': { border: 0 },
                 },

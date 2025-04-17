@@ -15,6 +15,13 @@ export const extendedTheme = {
     cssVariables: {
         colorSchemeSelector: 'class',
     },
+    components: {
+        MuiSvgIcon: {
+            defaultProps: {
+                fontSize: 'small',
+            },
+        },
+    },
 };
 
 export const shadcnExtendTheme = createTheme(deepmerge(shadcnTheme, extendedTheme));

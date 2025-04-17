@@ -2,9 +2,10 @@ import { MuiComponent } from '@/types';
 
 const MuiAutocomplete: MuiComponent<'MuiAutocomplete'> = {
     styleOverrides: {
-        paper: {
+        paper: ({ theme }) => ({
             padding: 4,
-        },
+            background: (theme.vars || theme).palette.background.default,
+        }),
         listbox: {
             padding: 0,
         },

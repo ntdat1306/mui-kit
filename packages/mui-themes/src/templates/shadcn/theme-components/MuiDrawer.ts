@@ -5,6 +5,7 @@ const MuiDrawer: MuiComponent<'MuiDrawer'> = {
     styleOverrides: {
         root: ({ theme }) => ({
             [`& .${drawerClasses.paper}`]: {
+                backgroundImage: 'none',
                 backgroundColor: (theme.vars || theme).palette.background.default,
             },
             [`&.${drawerClasses.anchorTop} .${drawerClasses.paper}`]: {

@@ -15,11 +15,11 @@ const MuiToggleButton: MuiComponent<'MuiToggleButton'> = {
             border: 0,
             color: (theme.vars || theme).palette.text.primary,
             '&.Mui-selected': {
-                color: (theme.vars || theme).palette.primary.main,
+                color: (theme.vars || theme).palette.secondary.contrastText,
                 backgroundColor: (theme.vars || theme).palette.secondary.main,
             },
             '&:hover': {
-                color: (theme.vars || theme).palette.text.secondary,
+                color: (theme.vars || theme).palette.secondary.contrastText,
                 backgroundColor: (theme.vars || theme).palette.secondary.main,
             },
             '&.Mui-disabled': {

@@ -8,6 +8,7 @@ const MuiPopover: MuiComponent<'MuiPopover'> = {
             margin: '0.25rem',
             boxShadow: (theme.vars || theme).customTokens.shadow.md,
             border: `1px solid ${(theme.vars || theme).palette.divider}`,
+            background: (theme.vars || theme).palette.background.default,
             [`& .${listClasses.root}`]: {
                 padding: 0,
                 [`.${menuItemClasses.root}`]: {
