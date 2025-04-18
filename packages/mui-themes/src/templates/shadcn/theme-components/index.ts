@@ -10,6 +10,7 @@ export { default as MuiDialog } from './MuiDialog';
 export { default as MuiDrawer } from './MuiDrawer';
 export { default as MuiFab } from './MuiFab';
 export { default as MuiLinearProgress } from './MuiLinearProgress';
+export { default as MuiList } from './MuiList';
 export { default as MuiMenu } from './MuiMenu';
 export { default as MuiPagination } from './MuiPagination';
 export { default as MuiPopover } from './MuiPopover';

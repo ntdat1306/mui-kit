@@ -124,6 +124,12 @@ const getShadcnComponents = (mode?: 'light' | 'dark'): Components => {
                     image: `${baseUrl}/divider-${mode}.png`,
                 },
                 {
+                    key: 'list',
+                    label: 'List',
+                    slug: 'list',
+                    image: `${baseUrl}/list-${mode}.png`,
+                },
+                {
                     key: 'table',
                     label: 'Table',
                     slug: 'table',
@@ -199,7 +205,7 @@ const getShadcnComponents = (mode?: 'light' | 'dark'): Components => {
                     key: 'app-bar',
                     label: 'App Bar',
                     slug: 'app-bar',
-                    image: `${baseUrl}/app-bar-${mode}.png`,
+                    image: `${baseUrl}/appbar-${mode}.png`,
                 },
                 {
                     key: 'card',
@@ -223,7 +229,7 @@ const getShadcnComponents = (mode?: 'light' | 'dark'): Components => {
                     key: 'bottom-navigation',
                     label: 'Bottom Navigation',
                     slug: 'bottom-navigation',
-                    image: `${baseUrl}/bottom-navigation-${mode}.png`,
+                    image: `${baseUrl}/bottomnav-${mode}.png`,
                 },
                 {
                     key: 'breadcrumbs',

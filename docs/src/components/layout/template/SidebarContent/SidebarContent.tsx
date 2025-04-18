@@ -10,7 +10,6 @@ import {
     ListItemText,
     ListSubheader,
     Stack,
-    typographyClasses,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import { Fragment, useState } from 'react';
@@ -41,27 +40,11 @@ const NestedList = (props: NestedListProps) => {
 
     const items = children.map((child) => (
         <Fragment key={child.key}>
-            <ListSubheader sx={{ paddingLeft: '2.5rem' }}>{child.subheader}</ListSubheader>
+            {child.subheader && <ListSubheader>{child.subheader}</ListSubheader>}
 
             {child.menu.map((item) => (
-                <ListItem
-                    key={`${child.key}-${item.key}`}
-                    disablePadding
-                    sx={{
-                        paddingLeft: '2rem',
-                    }}
-                >
-                    <ListItemButton
-                        selected={item.slug === suffix}
-                        onClick={() => handleNavigate(item.slug)}
-                        sx={(theme) => ({
-                            padding: '0 0.5rem',
-                            borderRadius: (theme.vars || theme).shape.borderRadius,
-                            '&.Mui-selected': {
-                                color: (theme.vars || theme).palette.primary.main,
-                            },
-                        })}
-                    >
+                <ListItem key={`${child.key}-${item.key}`} disablePadding>
+                    <ListItemButton selected={item.slug === suffix} onClick={() => handleNavigate(item.slug)}>
                         <ListItemText primary={item.label} />
                     </ListItemButton>
                 </ListItem>
@@ -85,44 +68,20 @@ const NestedList = (props: NestedListProps) => {
 
     return (
         <>
-            <ListItemButton
-                onClick={handleToggle}
-                sx={(theme) => ({
-                    borderRadius: (theme.vars || theme).shape.borderRadius,
-                    padding: '0 0.5rem',
-                })}
-            >
+            <ListItemButton onClick={handleToggle}>
                 <ListItemIcon
                     sx={(theme) => ({
                         color: (theme.vars || theme).palette.primary.main,
-                        minWidth: 0,
-                        marginRight: '0.375rem',
                     })}
                 >
                     {open ? <KeyboardArrowDown /> : <KeyboardArrowRight />}
                 </ListItemIcon>
 
-                <ListItemText
-                    primary={label}
-                    sx={{
-                        [`& .${typographyClasses.root}`]: {
-                            fontWeight: 500,
-                        },
-                    }}
-                />
+                <ListItemText primary={label} />
             </ListItemButton>
 
-            <Collapse in={open} timeout='auto' unmountOnExit>
-                <List
-                    disablePadding
-                    sx={{
-                        '& > * + *': {
-                            marginTop: '0.125rem',
-                        },
-                    }}
-                >
-                    {items}
-                </List>
+            <Collapse in={open} timeout='auto' unmountOnExit sx={{ marginLeft: 2 }}>
+                <List disablePadding>{items}</List>
             </Collapse>
         </>
     );
@@ -157,14 +116,7 @@ const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
                     ...(!toggleMobileSidebar && { borderRight: `1px solid ${(theme.vars || theme).palette.divider}` }),
                 })}
             >
-                <List
-                    disablePadding
-                    sx={{
-                        padding: '10px',
-                    }}
-                >
-                    {menu}
-                </List>
+                <List disablePadding>{menu}</List>
             </Box>
         </Stack>
     );

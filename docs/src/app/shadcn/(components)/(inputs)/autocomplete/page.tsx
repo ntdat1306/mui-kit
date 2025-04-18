@@ -1,11 +1,11 @@
 'use client';
 
 import { top100Films } from '@/constants/data';
-import { Autocomplete, Box, styled, TextField, Typography } from '@mui/material';
+import { Autocomplete, Stack, TextField, Typography } from '@mui/material';
 
 const Page = () => {
     return (
-        <>
+        <div>
             <Typography variant='h1'>Autocomplete</Typography>
             <Typography variant='p'>
                 The autocomplete is a normal text input enhanced by a panel of suggested options.
@@ -31,27 +31,29 @@ const Page = () => {
             <Typography variant='h2'>Combo box</Typography>
             <Typography variant='p'>The value must be chosen from a predefined set of allowed values.</Typography>
 
-            <Autocomplete
-                disablePortal
-                options={top100Films}
-                sx={{ width: 300, marginTop: 2 }}
-                renderInput={(params) => <TextField {...params} label='Movie' />}
-            />
+            <Stack spacing={2}>
+                <Autocomplete
+                    disablePortal
+                    options={top100Films}
+                    sx={{ width: 300 }}
+                    renderInput={(params) => <TextField {...params} label='Movie' />}
+                />
 
-            <Autocomplete
-                disablePortal
-                options={top100Films}
-                sx={{ width: 300, marginTop: 2 }}
-                renderInput={(params) => <TextField {...params} label='Movie' variant='filled' />}
-            />
+                <Autocomplete
+                    disablePortal
+                    options={top100Films}
+                    sx={{ width: 300 }}
+                    renderInput={(params) => <TextField {...params} label='Movie' variant='filled' />}
+                />
 
-            <Autocomplete
-                disablePortal
-                options={top100Films}
-                sx={{ width: 300, marginTop: 2 }}
-                renderInput={(params) => <TextField {...params} label='Movie' variant='standard' />}
-            />
-        </>
+                <Autocomplete
+                    disablePortal
+                    options={top100Films}
+                    sx={{ width: 300 }}
+                    renderInput={(params) => <TextField {...params} label='Movie' variant='standard' />}
+                />
+            </Stack>
+        </div>
     );
 };
 

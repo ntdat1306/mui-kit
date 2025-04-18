@@ -1,7 +1,11 @@
 'use client';
 
+import { redirect, usePathname } from 'next/navigation';
+
 const Page = () => {
-    return <div>132</div>;
+    const pathname = usePathname();
+
+    redirect(`${pathname}/overview`);
 };
 
 export default Page;

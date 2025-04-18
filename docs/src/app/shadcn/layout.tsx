@@ -1,3 +1,5 @@
+'use client';
+
 import { TemplateLayout } from '@/components/layout/template/TemplateLayout';
 import { shadcnExtendTheme } from '@/constants/theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';

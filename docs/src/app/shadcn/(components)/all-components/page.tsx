@@ -2,14 +2,16 @@
 
 import useComputedColorScheme from '@/hooks/useComputedColorScheme';
 import getShadcnComponents from '@/utils/getShadcnComponents';
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 
 const Page = () => {
     const pathname = usePathname();
     const computedColorScheme = useComputedColorScheme();
+
+    const prefix = pathname.split('/').slice(0, -1).join('/');
 
     const components = getShadcnComponents(computedColorScheme);
 
@@ -25,7 +27,7 @@ const Page = () => {
                         key={`${component.key}-${item.key}`}
                         size={{ xs: 6, sm: 4, md: 3 }}
                         component={Link}
-                        href={`${pathname}/${item.slug}`}
+                        href={`${prefix}/${item.slug}`}
                     >
                         <Card sx={{ height: '100%' }}>
                             <CardActionArea>

@@ -29,6 +29,7 @@ import {
     MuiTooltip,
     MuiTypography,
     MuiTabs,
+    MuiList,
 } from './theme-components';
 
 const themeComponents: ThemeComponents = {
@@ -61,6 +62,7 @@ const themeComponents: ThemeComponents = {
     MuiPagination,
     MuiStepper,
     MuiTabs,
+    MuiList,
 };
 
 export default themeComponents;

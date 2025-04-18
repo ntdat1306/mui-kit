@@ -138,6 +138,11 @@ export const sidebarItems: SidebarItem[] = [
                         slug: 'divider',
                     },
                     {
+                        key: 'list',
+                        label: 'List',
+                        slug: 'list',
+                    },
+                    {
                         key: 'table',
                         label: 'Table',
                         slug: 'table',
