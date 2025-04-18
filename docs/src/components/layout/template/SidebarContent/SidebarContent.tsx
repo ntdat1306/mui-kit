@@ -80,7 +80,7 @@ const NestedList = (props: NestedListProps) => {
                 <ListItemText primary={label} />
             </ListItemButton>
 
-            <Collapse in={open} timeout='auto' unmountOnExit sx={{ marginLeft: 2 }}>
+            <Collapse in={open} timeout='auto' unmountOnExit>
                 <List disablePadding>{items}</List>
             </Collapse>
         </>

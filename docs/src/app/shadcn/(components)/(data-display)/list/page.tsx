@@ -1,14 +1,7 @@
 'use client';
 
 import { Drafts, ExpandLess, ExpandMore, Inbox, Send, StarBorder } from '@mui/icons-material';
-import {
-    Collapse,
-    List,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
-    ListSubheader
-} from '@mui/material';
+import { Collapse, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from '@mui/material';
 import { useState } from 'react';
 
 const Page = () => {
@@ -63,7 +56,7 @@ const Page = () => {
                         </ListItemButton>
                     </List>
 
-                    <Collapse in={open} timeout='auto' unmountOnExit sx={{ marginLeft: 2 }}>
+                    <Collapse in={open} timeout='auto' unmountOnExit>
                         <List
                             component='div'
                             disablePadding
@@ -77,7 +70,7 @@ const Page = () => {
                             </ListItemButton>
                         </List>
 
-                        <Collapse in={open} timeout='auto' unmountOnExit sx={{ marginLeft: 2 }}>
+                        <Collapse in={open} timeout='auto' unmountOnExit>
                             <List component='div' disablePadding>
                                 <ListItemButton>
                                     <ListItemText primary='Starred' />

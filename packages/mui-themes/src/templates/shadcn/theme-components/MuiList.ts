@@ -39,6 +39,7 @@ const MuiList: MuiComponent<'MuiList'> = {
                 },
             },
             [`& .${collapseClasses.root}`]: {
+                marginLeft: '1rem',
                 borderLeft: `1px solid ${(theme.vars || theme).palette.divider}`,
                 [`& .${collapseClasses.wrapper}`]: {
                     padding: '0.125rem 0.625rem',
