@@ -1,16 +1,16 @@
 import { Components, CssVarsTheme, CssVarsThemeOptions, Theme, ThemeOptions } from '@mui/material';
-import { TypographyStyleOptions } from '@mui/material/styles/createTypography';
 
 // Add new variants for Typography components
 type TVariantsKey = 'p' | 'list' | 'blockquote' | 'table' | 'code' | 'lead' | 'large' | 'small' | 'muted';
-type TVariants = Record<TVariantsKey, TypographyStyleOptions>;
+type TVariants = Record<TVariantsKey, React.CSSProperties>;
 type TVariantsOptions = Partial<TVariants>;
 type TVariantOverrides = Record<TVariantsKey, true>;
 
-type ComponentName = keyof Components<Theme>;
+// Type for any component in Mui
+type CreateThemeComponents = Components<Omit<Theme, 'components' | 'palette'> & CssVarsTheme>;
+export type MuiComponent<T extends keyof CreateThemeComponents> = CreateThemeComponents[T];
 
-export type MuiComponent<T extends ComponentName> = Components<Omit<Theme, 'components' | 'palette'> & CssVarsTheme>[T];
-
+// Create theme options type
 export type CreateThemeOptions = Omit<ThemeOptions, 'components'> &
     Pick<CssVarsThemeOptions, 'defaultColorScheme' | 'colorSchemes' | 'components'> & {
         cssVariables?:
@@ -61,9 +61,11 @@ declare module '@mui/material/styles' {
 
     interface TypographyVariants extends TVariants {}
 
+    // Allow configuration using `createTheme()`
     interface TypographyVariantsOptions extends TVariantsOptions {}
 }
 
+// Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
     interface TypographyPropsVariantOverrides extends TVariantOverrides {}
 }

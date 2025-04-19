@@ -1,3 +1,3 @@
 export { default as shadcn } from './templates/shadcn';
 
-export { CreateThemeOptions } from './types';
+export type { CreateThemeOptions } from './types';
