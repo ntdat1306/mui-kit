@@ -4,7 +4,7 @@ const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
     light: {
         palette: {
             primary: {
-                main: '#00a76f', // #00a76f || #18181b
+                main: '#18181b',
             },
             secondary: {
                 main: '#f4f4f5',
@@ -22,7 +22,7 @@ const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
     dark: {
         palette: {
             primary: {
-                main: '#00a76f', // #00a76f || #fafafa
+                main: '#fafafa',
             },
             secondary: {
                 main: '#27272a',

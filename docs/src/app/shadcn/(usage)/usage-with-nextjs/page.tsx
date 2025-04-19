@@ -4,9 +4,7 @@ import { HighlightedCode } from '@/components/ui/HighlightedCode';
 import { Alert, alertClasses, AlertTitle, Typography } from '@mui/material';
 
 const content = {
-    createTheme: `'use client';
-
-import { CreateThemeOptions, shadcn } from '@datstack/mui-themes';
+    createTheme: `import { CreateThemeOptions, shadcn } from '@datstack/mui-themes';
 import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 
@@ -189,7 +187,7 @@ const Page = () => {
             <Typography variant='p'>
                 Wrap your root layout with <Typography variant='code'>{'<RootProvider>'}</Typography>.
             </Typography>
-            <HighlightedCode fileName='layout.tsx' code={content.themeProvider.layout} />
+            <HighlightedCode fileName='root-layout.tsx' code={content.themeProvider.layout} />
 
             {/* Preventing SSR flickering */}
             <Typography variant='h2'>Preventing SSR flickering</Typography>
@@ -228,9 +226,13 @@ const Page = () => {
             <Typography variant='h3'>Next.js App Router</Typography>
             <Typography variant='p'>Add the following code to the root layout file:</Typography>
             <HighlightedCode fileName='app/layout.tsx' code={content.ssr.appRouter} />
+            <Typography variant='p'>
+                If you don't add suppressHydrationWarning to your {'<html>'} tag, you will see warnings about "Extra
+                attributes from the server" because InitColorSchemeScript updates that element.
+            </Typography>
 
             {/* Next.js Pages Router */}
-            <Typography variant='h3'>Next.js App Router</Typography>
+            <Typography variant='h3'>Next.js Pages Router</Typography>
             <Typography variant='p'>Add the following code to the custom pages/_document.js file:</Typography>
             <HighlightedCode fileName='app/layout.tsx' code={content.ssr.pageRouter} />
 
@@ -242,7 +244,8 @@ const Page = () => {
             </Typography>
             <HighlightedCode fileName='app/layout.tsx' code={content.typescript} />
             <Typography variant='p'>
-                This import help you use <Typography variant='code'>theme.vars</Typography> in sx prop of any components.
+                This import help you use <Typography variant='code'>theme.vars</Typography> in sx prop of any
+                components.
             </Typography>
 
             {/* Quickstart */}
