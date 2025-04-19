@@ -12,7 +12,7 @@ import {
     Stack,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 
 type SidebarContentProps = {
     toggleMobileSidebar?: () => void;
@@ -28,15 +28,16 @@ const NestedList = (props: NestedListProps) => {
     const router = useRouter();
     const pathname = usePathname();
 
-    /**
-     * /shadcn -> prefix = "", suffix = "shadcn"
-     * /shadcn/autocomplete -> prefix = "shadcn", suffix = "autocomplete"
-     */
     const names = pathname.split('/');
     const [prefix, suffix] = names.slice(-2);
     const isMenuOpen = children.some((child) => child.menu.some((item) => item.slug === suffix));
 
     const [open, setOpen] = useState<boolean>(isMenuOpen);
+
+    /**
+     * /shadcn -> prefix = "", suffix = "shadcn"
+     * /shadcn/autocomplete -> prefix = "shadcn", suffix = "autocomplete"
+     */
 
     const items = children.map((child) => (
         <Fragment key={child.key}>
@@ -65,6 +66,11 @@ const NestedList = (props: NestedListProps) => {
             toggleMobileSidebar();
         }
     };
+
+    // Case when redirect from shadcn -> shadcn/overview
+    useEffect(() => {
+        setOpen(isMenuOpen);
+    }, [pathname]);
 
     return (
         <>
