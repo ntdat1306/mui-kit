@@ -34,6 +34,48 @@ export const sidebarItems: SidebarItem[] = [
         ],
     },
     {
+        key: 'usage',
+        label: 'Usage',
+        children: [
+            {
+                key: 'usage-react',
+                menu: [
+                    {
+                        key: 'usage-with-react',
+                        label: 'React',
+                        slug: 'usage-with-react',
+                    },
+                    {
+                        key: 'usage-with-nextjs',
+                        label: 'Next.js',
+                        slug: 'usage-with-nextjs',
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        key: 'customization',
+        label: 'Customization',
+        children: [
+            {
+                key: 'customization-theme',
+                menu: [
+                    {
+                        key: 'add-new-tokens',
+                        label: 'Add new tokens',
+                        slug: 'add-new-tokens',
+                    },
+                    {
+                        key: 'override-theme-tokens',
+                        label: 'Override theme tokens',
+                        slug: 'override-theme-tokens',
+                    },
+                ],
+            },
+        ],
+    },
+    {
         key: 'components',
         label: 'Components',
         children: [

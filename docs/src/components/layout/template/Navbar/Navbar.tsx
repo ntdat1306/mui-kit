@@ -1,5 +1,5 @@
 import { DragHandle } from '@mui/icons-material';
-import { alpha, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import { NavbarButton } from '../NavbarButton';
 import { TemplateThemeSelect } from '../ThemeSelect';
 

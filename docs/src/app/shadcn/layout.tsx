@@ -1,7 +1,7 @@
 'use client';
 
 import { TemplateLayout } from '@/components/layout/template/TemplateLayout';
-import { shadcnExtendTheme } from '@/constants/theme';
+import { shadcnExtendTheme } from '@/lib/theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 
@@ -11,7 +11,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
     return (
-        <ThemeProvider theme={shadcnExtendTheme}>
+        <ThemeProvider theme={shadcnExtendTheme} disableTransitionOnChange>
             <CssBaseline />
             <TemplateLayout>{children}</TemplateLayout>
         </ThemeProvider>

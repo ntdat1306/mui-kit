@@ -12,6 +12,10 @@ const MuiTypography: MuiComponent<'MuiTypography'> = {
                         lineHeight: '2.5rem',
                         scrollMargin: '5rem',
                         letterSpacing: '-0.025em',
+                        [theme.breakpoints.up('lg')]: {
+                            fontSize: '3rem',
+                            lineHeight: 1,
+                        },
                     },
                 },
                 {
@@ -57,6 +61,7 @@ const MuiTypography: MuiComponent<'MuiTypography'> = {
                     props: { variant: 'p' },
                     style: {
                         lineHeight: '1.75rem',
+                        marginBottom: '1.5rem',
                         '&:not(:first-child)': {
                             marginTop: '1.5rem',
                         },
