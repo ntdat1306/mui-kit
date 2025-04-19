@@ -7,7 +7,7 @@
         "dev": "pnpm --filter @datstack/mui-docs dev",
         "build:docs": "pnpm --filter @datstack/mui-docs build",
         "build:themes": "pnpm --filter @datstack/mui-themes build",
-        "publish": "cd packages/mui-themes && pnpm version patch && pnpm publish --access public"
+        "publish": "cd packages/mui-themes && pnpm version patch && git add . && git commit -m 'update version' && git push && pnpm publish --access public"
     },
     "keywords": [],
     "author": "",
