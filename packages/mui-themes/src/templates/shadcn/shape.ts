@@ -1,6 +1,6 @@
-import { ThemeOptions } from '@mui/material';
+import { CreateThemeOptions } from '@/types';
 
-const themeShape: ThemeOptions['shape'] = {
+const themeShape: CreateThemeOptions['shape'] = {
     borderRadius: 8,
 };
 

@@ -1,10 +1,6 @@
-import { ColorSystemOptions } from '@mui/material';
-import { DefaultColorScheme } from '@mui/material/styles/createThemeWithVars';
+import { CreateThemeOptions } from '@/types';
 
-type ColorSchemes = Partial<Record<DefaultColorScheme, boolean | ColorSystemOptions>> &
-    Record<never, ColorSystemOptions>;
-
-const themeColorSchemes: ColorSchemes = {
+const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
     light: {
         palette: {
             primary: {

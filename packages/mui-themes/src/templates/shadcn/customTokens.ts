@@ -1,36 +1,6 @@
-import { ThemeOptions } from '@mui/material';
+import { CreateThemeOptions } from '@/types';
 
-type CustomTokens = {
-    shadow: {
-        sm: string;
-        xs: string;
-        md: string;
-        lg: string;
-    };
-};
-
-declare module '@mui/material/styles' {
-    interface Theme {
-        customTokens: CustomTokens;
-    }
-
-    interface ThemeOptions {
-        customTokens?: {
-            shadow?: {
-                sm?: string;
-                xs?: string;
-                md?: string;
-                lg?: string;
-            };
-        };
-    }
-
-    interface ThemeVars {
-        customTokens: CustomTokens;
-    }
-}
-
-const themeCustomTokens: ThemeOptions['customTokens'] = {
+const themeCustomTokens: CreateThemeOptions['customTokens'] = {
     shadow: {
         xs: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
         sm: '0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1)',

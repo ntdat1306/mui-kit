@@ -1,4 +1,4 @@
-import { ThemeComponents } from '@/types';
+import { CreateThemeOptions } from '@/types';
 import {
     MuiAccordion,
     MuiAppBar,
@@ -12,6 +12,7 @@ import {
     MuiDrawer,
     MuiFab,
     MuiLinearProgress,
+    MuiList,
     MuiMenu,
     MuiPagination,
     MuiPopover,
@@ -23,16 +24,15 @@ import {
     MuiStepper,
     MuiSwitch,
     MuiTable,
+    MuiTabs,
     MuiTextField,
     MuiToggleButton,
     MuiToggleButtonGroup,
     MuiTooltip,
     MuiTypography,
-    MuiTabs,
-    MuiList,
 } from './theme-components';
 
-const themeComponents: ThemeComponents = {
+const themeComponents: CreateThemeOptions['components'] = {
     MuiAutocomplete,
     MuiButton,
     MuiCheckbox,
