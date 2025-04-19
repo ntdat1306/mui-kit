@@ -1,4 +1,4 @@
-import { CreateThemeOptions } from '@/types';
+import { CreateThemeOptions } from '@/types/theme';
 import themeColorSchemes from './colorSchemes';
 import themeComponents from './components';
 import themeCustomTokens from './customTokens';

@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { tabClasses, tabsClasses } from '@mui/material';
 
 const MuiTabs: MuiComponent<'MuiTabs'> = {

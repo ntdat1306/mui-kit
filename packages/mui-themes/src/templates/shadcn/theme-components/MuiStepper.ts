@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { stepConnectorClasses, stepLabelClasses } from '@mui/material';
 
 const MuiStepper: MuiComponent<'MuiStepper'> = {

@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { filledInputClasses, inputBaseClasses, inputClasses, outlinedInputClasses } from '@mui/material';
 
 const MuiSelect: MuiComponent<'MuiSelect'> = {

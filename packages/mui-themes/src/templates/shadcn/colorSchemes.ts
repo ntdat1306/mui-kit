@@ -1,4 +1,4 @@
-import { CreateThemeOptions } from '@/types';
+import { CreateThemeOptions } from '@/types/theme';
 
 const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
     light: {

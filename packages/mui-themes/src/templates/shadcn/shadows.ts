@@ -1,4 +1,4 @@
-import { CreateThemeOptions } from '@/types';
+import { CreateThemeOptions } from '@/types/theme';
 import { Shadows } from '@mui/material';
 
 const themeShadows: CreateThemeOptions['shadows'] = [

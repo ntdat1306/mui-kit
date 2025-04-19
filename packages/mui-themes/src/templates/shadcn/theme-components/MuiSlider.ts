@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 
 const MuiSlider: MuiComponent<'MuiSlider'> = {
     styleOverrides: {

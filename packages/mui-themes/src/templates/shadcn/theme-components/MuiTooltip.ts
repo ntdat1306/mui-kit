@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { tooltipClasses } from '@mui/material';
 
 const MuiTooltip: MuiComponent<'MuiTooltip'> = {

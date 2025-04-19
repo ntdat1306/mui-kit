@@ -1,4 +1,4 @@
-import { CreateThemeOptions } from '@/types';
+import { CreateThemeOptions } from '@/types/theme';
 
 const themeShape: CreateThemeOptions['shape'] = {
     borderRadius: 8,

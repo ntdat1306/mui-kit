@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { listClasses, menuItemClasses } from '@mui/material';
 
 const MuiPopover: MuiComponent<'MuiPopover'> = {

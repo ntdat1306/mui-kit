@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { svgIconClasses } from '@mui/material';
 
 const MuiCheckbox: MuiComponent<'MuiCheckbox'> = {

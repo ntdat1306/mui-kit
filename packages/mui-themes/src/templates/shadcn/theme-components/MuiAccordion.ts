@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { accordionSummaryClasses, typographyClasses } from '@mui/material';
 
 const MuiAccordion: MuiComponent<'MuiAccordion'> = {

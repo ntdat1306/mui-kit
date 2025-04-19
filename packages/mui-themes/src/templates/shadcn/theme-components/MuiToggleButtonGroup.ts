@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { toggleButtonGroupClasses } from '@mui/material';
 
 const MuiToggleButtonGroup: MuiComponent<'MuiToggleButtonGroup'> = {

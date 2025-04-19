@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { drawerClasses } from '@mui/material';
 
 const MuiDrawer: MuiComponent<'MuiDrawer'> = {

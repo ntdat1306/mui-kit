@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { switchClasses } from '@mui/material';
 
 const MuiSwitch: MuiComponent<'MuiSwitch'> = {

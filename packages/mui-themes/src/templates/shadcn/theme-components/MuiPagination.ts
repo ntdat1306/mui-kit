@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 import { paginationItemClasses } from '@mui/material';
 
 const MuiPagination: MuiComponent<'MuiPagination'> = {

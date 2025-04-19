@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 
 const MuiDialog: MuiComponent<'MuiDialog'> = {
     styleOverrides: {

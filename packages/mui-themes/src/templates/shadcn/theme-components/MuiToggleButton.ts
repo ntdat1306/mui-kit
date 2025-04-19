@@ -1,10 +1,4 @@
-import { MuiComponent } from '@/types';
-
-declare module '@mui/material/ToggleButton' {
-    interface ToggleButtonOwnProps {
-        variant?: 'outline';
-    }
-}
+import { MuiComponent } from '@/types/theme';
 
 const MuiToggleButton: MuiComponent<'MuiToggleButton'> = {
     defaultProps: {

@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 
 const MuiCard: MuiComponent<'MuiCard'> = {
     defaultProps: {

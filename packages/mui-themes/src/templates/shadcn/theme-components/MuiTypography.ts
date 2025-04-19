@@ -1,4 +1,4 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 
 const MuiTypography: MuiComponent<'MuiTypography'> = {
     styleOverrides: {

@@ -1,9 +1,9 @@
-import { MuiComponent } from '@/types';
+import { MuiComponent } from '@/types/theme';
 
 const MuiTable: MuiComponent<'MuiTable'> = {
     styleOverrides: {
         root: ({ theme }) => ({
-            background: (theme.vars ||theme).palette.background.default,
+            background: (theme.vars || theme).palette.background.default,
             '& thead': {
                 '& tr': {
                     '& th, & td': {
