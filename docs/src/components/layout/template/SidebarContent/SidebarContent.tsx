@@ -70,7 +70,7 @@ const NestedList = (props: NestedListProps) => {
     // Case when redirect from shadcn -> shadcn/overview
     useEffect(() => {
         setOpen(isMenuOpen);
-    }, [pathname]);
+    }, [pathname, isMenuOpen]);
 
     return (
         <>

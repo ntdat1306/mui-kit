@@ -26,7 +26,7 @@ const Page = () => {
                 <ToggleButton value='center' aria-label='centered' size='large'>
                     <FormatAlignCenter />
                 </ToggleButton>
-                <ToggleButton value='right' aria-label='right aligned' variant=''>
+                <ToggleButton value='right' aria-label='right aligned' variant='outline'>
                     <FormatAlignRight />
                 </ToggleButton>
                 <ToggleButton value='justify' aria-label='justified' disabled>

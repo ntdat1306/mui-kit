@@ -1,6 +1,5 @@
 import { Computer, DarkMode, LightMode } from '@mui/icons-material';
-import { Menu, MenuItem, PaletteMode, useColorScheme, useTheme } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import { Menu, MenuItem, PaletteMode, useColorScheme } from '@mui/material';
 import React, { useState } from 'react';
 import { NavbarButton } from '../NavbarButton';
 

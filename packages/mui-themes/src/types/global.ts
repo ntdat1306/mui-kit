@@ -1,9 +1,3 @@
-// Add new variants for Typography components
-type TVariantsKey = 'p' | 'list' | 'blockquote' | 'table' | 'code' | 'lead' | 'large' | 'small' | 'muted';
-type TVariants = Record<TVariantsKey, React.CSSProperties>;
-type TVariantsOptions = Partial<TVariants>;
-type TVariantOverrides = Record<TVariantsKey, true>;
-
 declare module '@mui/material/styles' {
     interface Theme {
         customTokens: {
@@ -38,15 +32,45 @@ declare module '@mui/material/styles' {
         };
     }
 
-    interface TypographyVariants extends TVariants {}
+    interface TypographyVariants {
+        p: React.CSSProperties;
+        list: React.CSSProperties;
+        blockquote: React.CSSProperties;
+        table: React.CSSProperties;
+        code: React.CSSProperties;
+        lead: React.CSSProperties;
+        large: React.CSSProperties;
+        small: React.CSSProperties;
+        muted: React.CSSProperties;
+    }
 
     // Allow configuration using `createTheme()`
-    interface TypographyVariantsOptions extends TVariantsOptions {}
+    interface TypographyVariantsOptions {
+        p?: React.CSSProperties;
+        list?: React.CSSProperties;
+        blockquote?: React.CSSProperties;
+        table?: React.CSSProperties;
+        code?: React.CSSProperties;
+        lead?: React.CSSProperties;
+        large?: React.CSSProperties;
+        small?: React.CSSProperties;
+        muted?: React.CSSProperties;
+    }
 }
 
 // Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
-    interface TypographyPropsVariantOverrides extends TVariantOverrides {}
+    interface TypographyPropsVariantOverrides {
+        p: true;
+        list: true;
+        blockquote: true;
+        table: true;
+        code: true;
+        lead: true;
+        large: true;
+        small: true;
+        muted: true;
+    }
 }
 
 // Add new props for ToggleButton component
