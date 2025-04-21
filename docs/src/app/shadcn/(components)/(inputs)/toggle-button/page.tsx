@@ -20,16 +20,16 @@ const Page = () => {
     return (
         <div>
             <ToggleButtonGroup value={alignment} exclusive onChange={handleAlignment} aria-label='text alignment'>
-                <ToggleButton value='left' aria-label='left aligned' size='large'>
+                <ToggleButton value='left' size='large'>
                     <FormatAlignLeft />
                 </ToggleButton>
-                <ToggleButton value='center' aria-label='centered' size='large'>
+                <ToggleButton value='center' size='large'>
                     <FormatAlignCenter />
                 </ToggleButton>
-                <ToggleButton value='right' aria-label='right aligned' variant='outline'>
+                <ToggleButton value='right' variant='outline' size='large'>
                     <FormatAlignRight />
                 </ToggleButton>
-                <ToggleButton value='justify' aria-label='justified' disabled>
+                <ToggleButton value='justify' disabled size='large'>
                     <FormatAlignJustify />
                 </ToggleButton>
             </ToggleButtonGroup>

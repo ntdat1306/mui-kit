@@ -1,5 +1,5 @@
 import { MuiComponent } from '@/types/theme';
-import { toggleButtonGroupClasses } from '@mui/material';
+import { toggleButtonClasses, toggleButtonGroupClasses } from '@mui/material';
 
 const MuiToggleButtonGroup: MuiComponent<'MuiToggleButtonGroup'> = {
     defaultProps: {
@@ -7,10 +7,12 @@ const MuiToggleButtonGroup: MuiComponent<'MuiToggleButtonGroup'> = {
     },
     styleOverrides: {
         root: ({ theme }) => ({
-            [`& .${toggleButtonGroupClasses.grouped}`]: {
+            [`& .${toggleButtonClasses.root}`]: {
                 margin: 2,
                 borderRadius: (theme.vars || theme).shape.borderRadius,
-                borderLeftColor: (theme.vars || theme).palette.divider,
+                "&[variant='outline']": {
+                    borderLeftColor: (theme.vars || theme).palette.divider,
+                },
             },
         }),
     },

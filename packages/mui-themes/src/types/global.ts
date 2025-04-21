@@ -80,5 +80,12 @@ declare module '@mui/material/ToggleButton' {
     }
 }
 
+// Add new props for Tabs component
+declare module '@mui/material/Tabs' {
+    interface TabsOwnProps {
+        type?: 'contained' | 'outline';
+    }
+}
+
 // Export here to re-export in index.ts file
 export {};
