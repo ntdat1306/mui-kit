@@ -25,10 +25,10 @@ const HeaderSection = () => {
     );
 };
 
-const BasicButtonSection = () => {
+const BasicSection = () => {
     const code = `import { Button, Stack } from '@mui/material';
 
-const ButtonDemo = () => {
+const Demo = () => {
     return (
         <Stack spacing={2}>
             <Stack direction='row' spacing={2}>
@@ -64,7 +64,7 @@ const ButtonDemo = () => {
     );
 };
 
-export default ButtonDemo;`;
+export default Demo;`;
 
     const preview = (
         <Stack spacing={2}>
@@ -112,11 +112,11 @@ export default ButtonDemo;`;
     );
 };
 
-const IconButtonSection = () => {
+const IconSection = () => {
     const code = `import { Delete, Send } from '@mui/icons-material';
 import { Button, Stack } from '@mui/material';
 
-const ButtonDemo = () => {
+const Demo = () => {
     return (
         <Stack direction='row' spacing={2}>
             <Button variant='outlined' startIcon={<Delete />}>
@@ -129,7 +129,7 @@ const ButtonDemo = () => {
     );
 };
     
-export default ButtonDemo;`;
+export default Demo;`;
 
     const preview = (
         <Stack direction='row' spacing={2}>
@@ -160,8 +160,8 @@ const Page = () => {
     return (
         <>
             <HeaderSection />
-            <BasicButtonSection />
-            <IconButtonSection />
+            <BasicSection />
+            <IconSection />
         </>
     );
 };

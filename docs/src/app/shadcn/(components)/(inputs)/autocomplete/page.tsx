@@ -35,7 +35,7 @@ const HeaderSection = () => {
 const ComboBoxSection = () => {
     const code = `import { Autocomplete, Stack, TextField, Typography } from '@mui/material';
 
-const AutocompleteDemo = () => {
+const Demo = () => {
     return (
         <Stack spacing={2}>
             <Autocomplete
@@ -60,7 +60,7 @@ const AutocompleteDemo = () => {
     );
 };
 
-export default AutocompleteDemo;`;
+export default Demo;`;
 
     const preview = (
         <Stack spacing={2}>

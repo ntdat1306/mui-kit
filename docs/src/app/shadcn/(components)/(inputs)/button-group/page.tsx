@@ -1,37 +1,105 @@
+'use client';
+
+import { PreviewCode } from '@/components/ui/PreviewCode';
 import { Button, ButtonGroup, Stack, Typography } from '@mui/material';
 
-const Page = () => {
+const HeaderSection = () => {
     return (
         <>
             <Typography variant='h1'>Button Group</Typography>
-            <Typography variant='body1'>The ButtonGroup component can be used to group related buttons.</Typography>
+            <Typography variant='p'>The ButtonGroup component can be used to group related buttons.</Typography>
+        </>
+    );
+};
+
+const BasicSection = () => {
+    const code = `import { Button, ButtonGroup } from '@mui/material';
+
+const Demo = () => {
+    return (
+        <ButtonGroup variant='contained'>
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+        </ButtonGroup>
+    );
+};
+
+export default Demo;`;
+
+    const preview = (
+        <ButtonGroup variant='contained'>
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+        </ButtonGroup>
+    );
+
+    return (
+        <>
             <Typography variant='h2'>Basic button group</Typography>
-            <Typography variant='body1'>
+            <Typography variant='p'>
                 The buttons can be grouped by wrapping them with the ButtonGroup component. They need to be immediate
                 children.
             </Typography>
+            <PreviewCode preview={preview} code={code} />
+        </>
+    );
+};
 
-            <ButtonGroup variant='contained' aria-label='Basic button group'>
+const VariantsSection = () => {
+    const code = `import { Button, ButtonGroup, Stack } from '@mui/material';
+
+const Demo = () => {
+    return (
+        <Stack spacing={2} sx={{ alignItems: 'center' }}>
+            <ButtonGroup variant='outlined'>
                 <Button>One</Button>
                 <Button>Two</Button>
                 <Button>Three</Button>
             </ButtonGroup>
 
-            <Typography variant='h2'>Button variants</Typography>
-            <Typography variant='body1'>All the standard button variants are supported.</Typography>
+            <ButtonGroup variant='text'>
+                <Button>One</Button>
+                <Button>Two</Button>
+                <Button>Three</Button>
+            </ButtonGroup>
+        </Stack>
+    );
+};
 
-            <Stack spacing={2}>
-                <ButtonGroup variant='outlined' aria-label='Basic button group'>
-                    <Button>One</Button>
-                    <Button>Two</Button>
-                    <Button>Three</Button>
-                </ButtonGroup>
-                <ButtonGroup variant='text' aria-label='Basic button group'>
-                    <Button>One</Button>
-                    <Button>Two</Button>
-                    <Button>Three</Button>
-                </ButtonGroup>
-            </Stack>
+export default Demo;`;
+
+    const preview = (
+        <Stack spacing={2} sx={{ alignItems: 'center' }}>
+            <ButtonGroup variant='outlined'>
+                <Button>One</Button>
+                <Button>Two</Button>
+                <Button>Three</Button>
+            </ButtonGroup>
+            <ButtonGroup variant='text'>
+                <Button>One</Button>
+                <Button>Two</Button>
+                <Button>Three</Button>
+            </ButtonGroup>
+        </Stack>
+    );
+
+    return (
+        <>
+            <Typography variant='h2'>Button variants</Typography>
+            <Typography variant='p'>All the standard button variants are supported.</Typography>
+            <PreviewCode preview={preview} code={code} />
+        </>
+    );
+};
+
+const Page = () => {
+    return (
+        <>
+            <HeaderSection />
+            <BasicSection />
+            <VariantsSection />
         </>
     );
 };

@@ -1,4 +1,6 @@
 @import './normalize.css';
+@import './highlightjs-light.css';
+@import './highlightjs-dark.css';
 
 * {
     margin: 0;

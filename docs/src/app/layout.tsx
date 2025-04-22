@@ -6,8 +6,6 @@ import { Geist, Geist_Mono } from 'next/font/google';
 // Import vars for theme type in sx
 import type {} from '@mui/material/themeCssVarsAugmentation';
 
-import 'highlight.js/styles/base16/material-darker.css';
-
 const geistSans = Geist({
     variable: '--font-geist-sans',
     subsets: ['latin'],

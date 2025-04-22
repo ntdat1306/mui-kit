@@ -1,18 +1,79 @@
-import { Add, Edit } from '@mui/icons-material';
+'use client';
+
+import { PreviewCode } from '@/components/ui/PreviewCode';
+import { Add, Edit, Favorite } from '@mui/icons-material';
+import { Fab, Stack, Typography } from '@mui/material';
+
+const HeaderSection = () => {
+    return (
+        <>
+            <Typography variant='h1'>Floating Action Button</Typography>
+            <Typography variant='p'>
+                A Floating Action Button (FAB) performs the primary, or most common, action on a screen.
+            </Typography>
+            <Typography variant='p'>
+                A floating action button appears in front of all screen content, typically as a circular shape with an
+                icon in its center. FABs come in two types: regular, and extended.
+            </Typography>
+            <Typography variant='p'>
+                Only use a FAB if it is the most suitable way to present a screen's primary action. Only one component
+                is recommended per screen to represent the most common action.
+            </Typography>
+        </>
+    );
+};
+
+const BasicSection = () => {
+    const code = `import { Add, Edit, Favorite } from '@mui/icons-material';
 import { Fab, Stack } from '@mui/material';
+
+const Demo = () => {
+    return (
+        <Stack direction='row' spacing={2}>
+            <Fab color='primary' aria-label='add'>
+                <Add />
+            </Fab>
+            <Fab color='secondary' aria-label='edit'>
+                <Edit />
+            </Fab>
+            <Fab disabled aria-label='like'>
+                <Favorite />
+            </Fab>
+        </Stack>
+    );
+};
+
+export default Demo;`;
+
+    const preview = (
+        <Stack direction='row' spacing={2}>
+            <Fab color='primary' aria-label='add'>
+                <Add />
+            </Fab>
+            <Fab color='secondary' aria-label='edit'>
+                <Edit />
+            </Fab>
+            <Fab disabled aria-label='like'>
+                <Favorite />
+            </Fab>
+        </Stack>
+    );
+
+    return (
+        <>
+            <Typography variant='h2'>Basic FAB</Typography>
+            <Typography variant='p'>Some FAB with different color.</Typography>
+            <PreviewCode preview={preview} code={code} />
+        </>
+    );
+};
 
 const Page = () => {
     return (
-        <div>
-            <Stack direction='row' spacing={2}>
-                <Fab color='primary' aria-label='add'>
-                    <Add />
-                </Fab>
-                <Fab color='secondary' aria-label='edit'>
-                    <Edit />
-                </Fab>
-            </Stack>
-        </div>
+        <>
+            <HeaderSection />
+            <BasicSection />
+        </>
     );
 };
 
