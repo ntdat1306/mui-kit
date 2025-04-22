@@ -1,11 +1,12 @@
 'use client';
 
+import { PreviewCode } from '@/components/ui/PreviewCode';
 import { top100Films } from '@/constants/data';
 import { Autocomplete, Stack, TextField, Typography } from '@mui/material';
 
-const Page = () => {
+const HeaderSection = () => {
     return (
-        <div>
+        <>
             <Typography variant='h1'>Autocomplete</Typography>
             <Typography variant='p'>
                 The autocomplete is a normal text input enhanced by a panel of suggested options.
@@ -27,33 +28,79 @@ const Page = () => {
             <Typography variant='p'>
                 It's meant to be an improved version of the "react-select" and "downshift" packages.
             </Typography>
+        </>
+    );
+};
 
+const ComboBoxSection = () => {
+    const code = `import { Autocomplete, Stack, TextField, Typography } from '@mui/material';
+
+const AutocompleteDemo = () => {
+    return (
+        <Stack spacing={2}>
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='outlined' />}
+            />
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='filled' />}
+            />
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='standard' />}
+            />
+        </Stack>
+    );
+};
+
+export default AutocompleteDemo;`;
+
+    const preview = (
+        <Stack spacing={2}>
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 256 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='outlined' />}
+            />
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 256 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='filled' />}
+            />
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 256 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='standard' />}
+            />
+        </Stack>
+    );
+
+    return (
+        <>
             <Typography variant='h2'>Combo box</Typography>
             <Typography variant='p'>The value must be chosen from a predefined set of allowed values.</Typography>
 
-            <Stack spacing={2}>
-                <Autocomplete
-                    disablePortal
-                    options={top100Films}
-                    sx={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label='Movie' />}
-                />
+            <PreviewCode preview={preview} code={code} />
+        </>
+    );
+};
 
-                <Autocomplete
-                    disablePortal
-                    options={top100Films}
-                    sx={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label='Movie' variant='filled' />}
-                />
-
-                <Autocomplete
-                    disablePortal
-                    options={top100Films}
-                    sx={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label='Movie' variant='standard' />}
-                />
-            </Stack>
-        </div>
+const Page = () => {
+    return (
+        <>
+            <HeaderSection />
+            <ComboBoxSection />
+        </>
     );
 };
 

@@ -10,7 +10,12 @@ const MuiTabs: MuiComponent<'MuiTabs'> = {
             variants: [
                 {
                     props: { type: 'outline' },
-                    style: {},
+                    style: {
+                        borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
+                        [`& .${tabClasses.root}`]: {
+                            textTransform: 'none',
+                        },
+                    },
                 },
                 {
                     props: { type: 'contained' },
