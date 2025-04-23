@@ -61,7 +61,7 @@ const HighlightedCode = ({ code, fileName, canCopy = true }: HighlightedCodeProp
                 )}
             </Stack>
 
-            <Paper sx={{ maxHeight: 350, overflow: 'auto' }}>
+            <Paper className='hljs' sx={{ maxHeight: 384, overflow: 'auto' }}>
                 <pre>
                     <code className='hljs' dangerouslySetInnerHTML={{ __html: highlighted.value }}></code>
                 </pre>
