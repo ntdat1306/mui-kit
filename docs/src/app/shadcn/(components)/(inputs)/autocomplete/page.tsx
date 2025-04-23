@@ -41,19 +41,19 @@ const Demo = () => {
             <Autocomplete
                 disablePortal
                 options={top100Films}
-                sx={{ width: 300 }}
+                sx={{ width: 256 }}
                 renderInput={(params) => <TextField {...params} label='Movie' variant='outlined' />}
             />
             <Autocomplete
                 disablePortal
                 options={top100Films}
-                sx={{ width: 300 }}
+                sx={{ width: 256 }}
                 renderInput={(params) => <TextField {...params} label='Movie' variant='filled' />}
             />
             <Autocomplete
                 disablePortal
                 options={top100Films}
-                sx={{ width: 300 }}
+                sx={{ width: 256 }}
                 renderInput={(params) => <TextField {...params} label='Movie' variant='standard' />}
             />
         </Stack>

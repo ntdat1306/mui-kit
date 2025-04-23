@@ -1,9 +1,31 @@
 'use client';
 
-import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
-import React, { useState } from 'react';
+import { PreviewCode } from '@/components/ui/PreviewCode';
+import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Stack, Typography } from '@mui/material';
+import { useState } from 'react';
 
-const Page = () => {
+const HeaderSection = () => {
+    return (
+        <>
+            <Typography variant='h1'>Select</Typography>
+            <Typography variant='p'>
+                Select components are used for collecting user provided information from a list of options.
+            </Typography>
+        </>
+    );
+};
+
+const BasicSection = () => {
+    const [age, setAge] = useState<string>('');
+
+    const handleChange = (event: SelectChangeEvent) => {
+        setAge(event.target.value as string);
+    };
+
+    const code = `import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Stack } from '@mui/material';
+import { useState } from 'react';
+
+const Demo = () => {
     const [age, setAge] = useState<string>('');
 
     const handleChange = (event: SelectChangeEvent) => {
@@ -11,51 +33,87 @@ const Page = () => {
     };
 
     return (
-        <div>
-            <FormControl fullWidth size='small'>
-                <InputLabel id='demo-simple-select-label'>Age</InputLabel>
-                <Select
-                    labelId='demo-simple-select-label'
-                    id='demo-simple-select'
-                    label='Age'
-                    value={age}
-                    onChange={handleChange}
-                >
+        <Stack spacing={2}>
+            <FormControl size='small' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
                     <MenuItem value={10}>Ten</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
                     <MenuItem value={30}>Thirty</MenuItem>
                 </Select>
             </FormControl>
 
-            <FormControl fullWidth variant='filled'>
-                <InputLabel id='demo-simple-select-standard-label'>Age</InputLabel>
-                <Select
-                    labelId='demo-simple-select-standard-label'
-                    id='demo-simple-select-standard'
-                    value={age}
-                    onChange={handleChange}
-                    label='Age'
-                >
+            <FormControl size='small' variant='filled' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
                     <MenuItem value={10}>Ten</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
                     <MenuItem value={30}>Thirty</MenuItem>
                 </Select>
             </FormControl>
 
-            <FormControl fullWidth variant='standard'>
-                <InputLabel id='demo-simple-select-filled-label'>Age</InputLabel>
-                <Select
-                    labelId='demo-simple-select-filled-label'
-                    id='demo-simple-select-filled'
-                    value={age}
-                    onChange={handleChange}
-                >
+            <FormControl size='small' variant='standard' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
                     <MenuItem value={10}>Ten</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
                     <MenuItem value={30}>Thirty</MenuItem>
                 </Select>
             </FormControl>
-        </div>
+        </Stack>
+    );
+};
+
+export default Demo;`;
+
+    const preview = (
+        <Stack spacing={2}>
+            <FormControl size='small' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+
+            <FormControl size='small' variant='filled' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+
+            <FormControl size='small' variant='standard' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+        </Stack>
+    );
+
+    return (
+        <>
+            <Typography variant='h2'>Basic select</Typography>
+            <Typography variant='p'>
+                Menus are positioned under their emitting elements, unless they are close to the bottom of the viewport.
+            </Typography>
+            <PreviewCode preview={preview} code={code} />
+        </>
+    );
+};
+
+const Page = () => {
+    return (
+        <>
+            <HeaderSection />
+            <BasicSection />
+        </>
     );
 };
 

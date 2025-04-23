@@ -6,7 +6,7 @@ const MuiToggleButton: MuiComponent<'MuiToggleButton'> = {
     },
     styleOverrides: {
         root: ({ theme }) => ({
-            border: 0,
+            border: '1px solid transparent',
             color: (theme.vars || theme).palette.text.primary,
             '&.Mui-selected': {
                 color: (theme.vars || theme).palette.secondary.contrastText,
@@ -17,8 +17,8 @@ const MuiToggleButton: MuiComponent<'MuiToggleButton'> = {
                 backgroundColor: (theme.vars || theme).palette.secondary.main,
             },
             '&.Mui-disabled': {
-                border: 0,
                 opacity: 0.5,
+                border: '1px solid transparent',
                 color: (theme.vars || theme).palette.text.primary,
             },
             variants: [
