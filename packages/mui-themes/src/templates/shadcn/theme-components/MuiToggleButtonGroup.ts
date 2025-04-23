@@ -13,7 +13,7 @@ const MuiToggleButtonGroup: MuiComponent<'MuiToggleButtonGroup'> = {
                 "&[variant='outline']": {
                     borderLeftColor: (theme.vars || theme).palette.divider,
                 },
-                [`&.${toggleButtonGroupClasses.grouped}.Mui-selected+.${toggleButtonGroupClasses.grouped}.Mui-selected`]:
+                [`&.${toggleButtonGroupClasses.grouped}.Mui-selected + .${toggleButtonGroupClasses.grouped}.Mui-selected`]:
                     {
                         margin: '2px',
                         borderLeft: '1px solid transparent',
