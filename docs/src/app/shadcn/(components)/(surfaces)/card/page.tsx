@@ -1,41 +1,99 @@
-import { Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material';
-import React, { Fragment } from 'react';
+'use client';
 
-const bull = (
-    <Box component='span' sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
-        •
-    </Box>
-);
+import { PreviewCode } from '@/components/ui/PreviewCode';
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 
-const card = (
-    <Fragment>
-        <CardContent>
-            <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
-                Word of the Day
+const HeaderSection = () => {
+    return (
+        <>
+            <Typography variant='h1'>Card</Typography>
+            <Typography variant='p'>Cards contain content and actions about a single subject.</Typography>
+        </>
+    );
+};
+
+const IntroductionSection = () => {
+    const preview = (
+        <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+                sx={{ height: 140 }}
+                image='https://mui.com/static/images/cards/contemplative-reptile.jpg'
+                title='green iguana'
+            />
+            <CardContent>
+                <Typography gutterBottom variant='h5' component='div'>
+                    Lizard
+                </Typography>
+                <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all
+                    continents except Antarctica
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size='small'>Share</Button>
+                <Button size='small'>Learn More</Button>
+            </CardActions>
+        </Card>
+    );
+
+    const code = `import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
+
+const Demo = () => {
+    return (
+        <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+                sx={{ height: 140 }}
+                image='https://mui.com/static/images/cards/contemplative-reptile.jpg'
+                title='green iguana'
+            />
+            <CardContent>
+                <Typography gutterBottom variant='h5' component='div'>
+                    Lizard
+                </Typography>
+                <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all
+                    continents except Antarctica
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size='small'>Share</Button>
+                <Button size='small'>Learn More</Button>
+            </CardActions>
+        </Card>
+    );
+};
+
+export default Demo;`;
+
+    return (
+        <>
+            <Typography variant='h2'>Introduction</Typography>
+            <Typography variant='p'>
+                Cards are surfaces that display content and actions on a single topic. The Material UI Card component
+                includes several complementary utility components to handle various use cases:
             </Typography>
-            <Typography variant='h5' component='div'>
-                be{bull}nev{bull}o{bull}lent
+            <Typography variant='list'>
+                <li>Card: a surface-level container for grouping related components.</li>
+                <li>Card Content: the wrapper for the Card content.</li>
+                <li>Card Header: an optional wrapper for the Card header.</li>
+                <li>Card Media: an optional container for displaying images, videos, etc.</li>
+                <li>Card Actions: an optional wrapper that groups a set of buttons.</li>
+                <li>
+                    Card Action Area: an optional wrapper that allows users to interact with the specified area of the
+                    Card.
+                </li>
             </Typography>
-            <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>adjective</Typography>
-            <Typography variant='body2'>
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-            </Typography>
-        </CardContent>
-        <CardActions>
-            <Button size='small'>Learn More</Button>
-        </CardActions>
-    </Fragment>
-);
+            <PreviewCode preview={preview} code={code} />
+        </>
+    );
+};
 
 const Page = () => {
     return (
-        <div>
-            <Box sx={{ minWidth: 275 }}>
-                <Card variant='outlined'>{card}</Card>
-            </Box>
-        </div>
+        <>
+            <HeaderSection />
+            <IntroductionSection />
+        </>
     );
 };
 

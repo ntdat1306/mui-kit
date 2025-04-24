@@ -4,14 +4,25 @@ import { paginationItemClasses } from '@mui/material';
 const MuiPagination: MuiComponent<'MuiPagination'> = {
     defaultProps: {
         shape: 'rounded',
+        variant: 'outlined',
     },
     styleOverrides: {
         root: ({ theme }) => ({
-            [`& .Mui-selected.${paginationItemClasses.root}`]: {
-                boxShadow: (theme.vars || theme).customTokens.shadow.xs,
-                border: `1px solid ${(theme.vars || theme).palette.divider}`,
-                backgroundColor: (theme.vars || theme).palette.background.default,
-            },
+            variants: [
+                {
+                    props: { variant: 'outlined' },
+                    style: {
+                        [`& .${paginationItemClasses.root}`]: {
+                            border: 'none',
+                            [`&.Mui-selected`]: {
+                                boxShadow: (theme.vars || theme).customTokens.shadow.xs,
+                                border: `1px solid ${(theme.vars || theme).palette.divider}`,
+                                backgroundColor: (theme.vars || theme).palette.background.default,
+                            },
+                        },
+                    },
+                },
+            ],
         }),
     },
 };

@@ -1,4 +1,5 @@
-import { SidebarItem, sidebarItems } from '@/constants/navigation';
+import { ShadcnLogo } from '@/components/icon';
+import { ItemChildrenMenu, SidebarItem, sidebarItems } from '@/constants/navigation';
 import { KeyboardArrowDown, KeyboardArrowRight } from '@mui/icons-material';
 import {
     Box,
@@ -11,8 +12,9 @@ import {
     ListSubheader,
     Stack,
 } from '@mui/material';
+import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 
 type SidebarContentProps = {
     toggleMobileSidebar?: () => void;
@@ -22,9 +24,34 @@ type NestedListProps = SidebarItem & {
     toggleMobileSidebar?: () => void;
 };
 
-const NestedList = (props: NestedListProps) => {
-    const { label, children, toggleMobileSidebar } = props;
+type NestedListItem = {
+    item: ItemChildrenMenu;
+    selected: boolean;
+    onClick: (slug: string) => void;
+};
 
+const NestedListItem = ({ item, selected, onClick }: NestedListItem) => {
+    const ref = useRef<HTMLDivElement>(null);
+
+    // Scroll into view when selected
+    useEffect(() => {
+        if (selected) {
+            ref.current?.scrollIntoView({
+                behavior: 'smooth',
+            });
+        }
+    }, [selected]);
+
+    return (
+        <ListItem disablePadding component='div' ref={ref}>
+            <ListItemButton selected={selected} onClick={() => onClick(item.slug)}>
+                <ListItemText primary={item.label} />
+            </ListItemButton>
+        </ListItem>
+    );
+};
+
+const NestedList = ({ label, children, toggleMobileSidebar }: NestedListProps) => {
     const router = useRouter();
     const pathname = usePathname();
 
@@ -38,25 +65,6 @@ const NestedList = (props: NestedListProps) => {
      * /shadcn -> prefix = "", suffix = "shadcn"
      * /shadcn/autocomplete -> prefix = "shadcn", suffix = "autocomplete"
      */
-
-    const items = children.map((child) => (
-        <Fragment key={child.key}>
-            {child.subheader && <ListSubheader>{child.subheader}</ListSubheader>}
-
-            {child.menu.map((item) => (
-                <ListItem key={`${child.key}-${item.key}`} disablePadding>
-                    <ListItemButton selected={item.slug === suffix} onClick={() => handleNavigate(item.slug)}>
-                        <ListItemText primary={item.label} />
-                    </ListItemButton>
-                </ListItem>
-            ))}
-        </Fragment>
-    ));
-
-    const handleToggle = () => {
-        setOpen(!open);
-    };
-
     const handleNavigate = (slug: string) => {
         const path = prefix ? names.slice(0, names.length - 1).join('/') : pathname;
 
@@ -67,10 +75,24 @@ const NestedList = (props: NestedListProps) => {
         }
     };
 
-    // Case when redirect from shadcn -> shadcn/overview
-    useEffect(() => {
-        setOpen(isMenuOpen);
-    }, [pathname, isMenuOpen]);
+    const items = children.map((child) => (
+        <Fragment key={child.key}>
+            {child.subheader && <ListSubheader>{child.subheader}</ListSubheader>}
+
+            {child.menu.map((item) => (
+                <NestedListItem
+                    key={`${child.key}-${item.key}`}
+                    item={item}
+                    selected={item.slug === suffix}
+                    onClick={handleNavigate}
+                />
+            ))}
+        </Fragment>
+    ));
+
+    const handleToggle = () => {
+        setOpen(!open);
+    };
 
     return (
         <>
@@ -94,6 +116,9 @@ const NestedList = (props: NestedListProps) => {
 };
 
 const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
+    const pathname = usePathname();
+    const basePath = pathname.split('/')[1];
+
     const menu = sidebarItems.map((item) => (
         <NestedList {...item} toggleMobileSidebar={toggleMobileSidebar} key={item.key} />
     ));
@@ -103,15 +128,19 @@ const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
             {/* Logo */}
             <Box
                 sx={(theme) => ({
+                    gap: 1,
                     flexShrink: 0,
-                    height: (theme.vars || theme).docs.navbarHeight,
-                    borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
                     display: 'flex',
                     alignItems: 'center',
                     paddingLeft: (theme.vars || theme).docs.padding,
+                    height: (theme.vars || theme).docs.navbarHeight,
+                    borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
                 })}
+                component={Link}
+                href={`/${basePath}`}
             >
-                Logo
+                <ShadcnLogo fontSize={24} />
+                <Box sx={{ fontWeight: 700 }}>shadcn/ui</Box>
             </Box>
 
             {/* Menu */}

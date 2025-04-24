@@ -1,4 +1,4 @@
-type ItemChildrenMenu = {
+export type ItemChildrenMenu = {
     key: string;
     label: string;
     slug: string;

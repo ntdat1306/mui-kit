@@ -18,6 +18,7 @@ export { default as MuiSelect } from './MuiSelect';
 export { default as MuiSkeleton } from './MuiSkeleton';
 export { default as MuiSlider } from './MuiSlider';
 export { default as MuiSnackbarContent } from './MuiSnackbarContent';
+export { default as MuiSpeedDial } from './MuiSpeedDial';
 export { default as MuiStepper } from './MuiStepper';
 export { default as MuiSwitch } from './MuiSwitch';
 export { default as MuiTable } from './MuiTable';
@@ -27,3 +28,4 @@ export { default as MuiToggleButton } from './MuiToggleButton';
 export { default as MuiToggleButtonGroup } from './MuiToggleButtonGroup';
 export { default as MuiTooltip } from './MuiTooltip';
 export { default as MuiTypography } from './MuiTypography';
+

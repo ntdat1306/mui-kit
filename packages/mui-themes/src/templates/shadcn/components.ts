@@ -20,6 +20,7 @@ import {
     MuiSkeleton,
     MuiSlider,
     MuiSnackbarContent,
+    MuiSpeedDial,
     MuiStepper,
     MuiSwitch,
     MuiTable,
@@ -61,6 +62,7 @@ const themeComponents: CreateThemeOptions['components'] = {
     MuiStepper,
     MuiTabs,
     MuiList,
+    MuiSpeedDial,
 };
 
 export default themeComponents;
