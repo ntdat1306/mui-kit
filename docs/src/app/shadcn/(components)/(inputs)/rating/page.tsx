@@ -1,8 +1,8 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { Box, Rating, Stack, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import { Rating, Stack, Typography } from '@mui/material';
+import { useState } from 'react';
 
 const HeaderSection = () => {
     return (
@@ -21,7 +21,7 @@ const BasicSection = () => {
 
     const preview = (
         <Stack spacing={2}>
-            <Box>
+            <div>
                 <Typography component='legend'>Controlled</Typography>
                 <Rating
                     value={value}
@@ -29,8 +29,8 @@ const BasicSection = () => {
                         setValue(newValue);
                     }}
                 />
-            </Box>
-            <Box>
+            </div>
+            <div>
                 <Typography component='legend'>Uncontrolled</Typography>
                 <Rating
                     onChange={(_, newValue) => {
@@ -38,23 +38,23 @@ const BasicSection = () => {
                     }}
                     defaultValue={2}
                 />
-            </Box>
-            <Box>
+            </div>
+            <div>
                 <Typography component='legend'>Read only</Typography>
                 <Rating value={value} readOnly />
-            </Box>
-            <Box>
+            </div>
+            <div>
                 <Typography component='legend'>Disabled</Typography>
                 <Rating value={value} disabled />
-            </Box>
-            <Box>
+            </div>
+            <div>
                 <Typography component='legend'>No rating given</Typography>
                 <Rating value={null} />
-            </Box>
+            </div>
         </Stack>
     );
 
-    const code = `import { Box, Rating, Stack, Typography } from '@mui/material';
+    const code = `import { Rating, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 
 const Demo = () => {
@@ -62,7 +62,7 @@ const Demo = () => {
 
     return (
         <Stack spacing={2}>
-            <Box>
+            <div>
                 <Typography component='legend'>Controlled</Typography>
                 <Rating
                     value={value}
@@ -70,8 +70,8 @@ const Demo = () => {
                         setValue(newValue);
                     }}
                 />
-            </Box>
-            <Box>
+            </div>
+            <div>
                 <Typography component='legend'>Uncontrolled</Typography>
                 <Rating
                     onChange={(_, newValue) => {
@@ -79,19 +79,19 @@ const Demo = () => {
                     }}
                     defaultValue={2}
                 />
-            </Box>
-            <Box>
+            </div>
+            <div>
                 <Typography component='legend'>Read only</Typography>
                 <Rating value={value} readOnly />
-            </Box>
-            <Box>
+            </div>
+            <div>
                 <Typography component='legend'>Disabled</Typography>
                 <Rating value={value} disabled />
-            </Box>
-            <Box>
+            </div>
+            <div>
                 <Typography component='legend'>No rating given</Typography>
                 <Rating value={null} />
-            </Box>
+            </div>
         </Stack>
     );
 };

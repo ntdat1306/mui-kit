@@ -16,7 +16,7 @@ const HeaderSection = () => {
 
 const PreviewSection = () => {
     const preview = (
-        <Box>
+        <div>
             <Typography variant='h1'>The Joke Tax Chronicles</Typography>
             <Typography variant='p'>
                 Once upon a time, in a far-off land, there was a very lazy king who spent all day lounging on his
@@ -94,14 +94,14 @@ const PreviewSection = () => {
                 The moral of the story is: never underestimate the power of a good laugh and always be careful of bad
                 ideas.
             </Typography>
-        </Box>
+        </div>
     );
 
     const code = `import { Box, Typography } from '@mui/material';
 
 const Demo = () => {
     return (
-        <Box>
+        <div>
             <Typography variant='h1'>The Joke Tax Chronicles</Typography>
             <Typography variant='p'>
                 Once upon a time, in a far-off land, there was a very lazy king who spent all day lounging on his
@@ -179,7 +179,7 @@ const Demo = () => {
                 The moral of the story is: never underestimate the power of a good laugh and always be careful of bad
                 ideas.
             </Typography>
-        </Box>
+        </div>
     );
 };
 
