@@ -38,6 +38,7 @@ const NestedListItem = ({ item, selected, onClick }: NestedListItem) => {
         if (selected) {
             ref.current?.scrollIntoView({
                 behavior: 'smooth',
+                block: 'center',
             });
         }
     }, [selected]);
