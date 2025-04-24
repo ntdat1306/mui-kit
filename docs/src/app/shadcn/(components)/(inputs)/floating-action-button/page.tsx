@@ -24,6 +24,20 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <Stack direction='row' spacing={2}>
+            <Fab color='primary' aria-label='add'>
+                <Add />
+            </Fab>
+            <Fab color='secondary' aria-label='edit'>
+                <Edit />
+            </Fab>
+            <Fab disabled aria-label='like'>
+                <Favorite />
+            </Fab>
+        </Stack>
+    );
+
     const code = `import { Add, Edit, Favorite } from '@mui/icons-material';
 import { Fab, Stack } from '@mui/material';
 
@@ -44,20 +58,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack direction='row' spacing={2}>
-            <Fab color='primary' aria-label='add'>
-                <Add />
-            </Fab>
-            <Fab color='secondary' aria-label='edit'>
-                <Edit />
-            </Fab>
-            <Fab disabled aria-label='like'>
-                <Favorite />
-            </Fab>
-        </Stack>
-    );
 
     return (
         <>

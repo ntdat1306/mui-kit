@@ -15,6 +15,12 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <Badge badgeContent={4} color='primary'>
+            <Mail color='action' />
+        </Badge>
+    );
+
     const code = `import { Mail } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 
@@ -27,12 +33,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Badge badgeContent={4} color='primary'>
-            <Mail color='action' />
-        </Badge>
-    );
 
     return (
         <>
@@ -47,6 +47,17 @@ export default Demo;`;
 };
 
 const ColorSection = () => {
+    const preview = (
+        <Stack spacing={2} direction='row'>
+            <Badge badgeContent={4} color='secondary'>
+                <Mail color='action' />
+            </Badge>
+            <Badge badgeContent={4} color='success'>
+                <Mail color='action' />
+            </Badge>
+        </Stack>
+    );
+
     const code = `import { Mail } from '@mui/icons-material';
 import { Badge, Stack } from '@mui/material';
 
@@ -64,17 +75,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack spacing={2} direction='row'>
-            <Badge badgeContent={4} color='secondary'>
-                <Mail color='action' />
-            </Badge>
-            <Badge badgeContent={4} color='success'>
-                <Mail color='action' />
-            </Badge>
-        </Stack>
-    );
 
     return (
         <>

@@ -26,6 +26,40 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <Stack spacing={2}>
+            <Stack direction='row' spacing={2}>
+                <Button variant='text'>Text</Button>
+                <Button variant='contained'>Contained</Button>
+                <Button variant='outlined'>Outlined</Button>
+            </Stack>
+
+            <Stack direction='row' spacing={2}>
+                <Button variant='text' disabled>
+                    Text
+                </Button>
+                <Button variant='contained' disabled>
+                    Contained
+                </Button>
+                <Button variant='outlined' disabled>
+                    Outlined
+                </Button>
+            </Stack>
+
+            <Stack direction='row' spacing={2}>
+                <Button variant='text' loading>
+                    Text
+                </Button>
+                <Button variant='contained' loading>
+                    Contained
+                </Button>
+                <Button variant='outlined' loading>
+                    Outlined
+                </Button>
+            </Stack>
+        </Stack>
+    );
+
     const code = `import { Button, Stack } from '@mui/material';
 
 const Demo = () => {
@@ -66,40 +100,6 @@ const Demo = () => {
 
 export default Demo;`;
 
-    const preview = (
-        <Stack spacing={2}>
-            <Stack direction='row' spacing={2}>
-                <Button variant='text'>Text</Button>
-                <Button variant='contained'>Contained</Button>
-                <Button variant='outlined'>Outlined</Button>
-            </Stack>
-
-            <Stack direction='row' spacing={2}>
-                <Button variant='text' disabled>
-                    Text
-                </Button>
-                <Button variant='contained' disabled>
-                    Contained
-                </Button>
-                <Button variant='outlined' disabled>
-                    Outlined
-                </Button>
-            </Stack>
-
-            <Stack direction='row' spacing={2}>
-                <Button variant='text' loading>
-                    Text
-                </Button>
-                <Button variant='contained' loading>
-                    Contained
-                </Button>
-                <Button variant='outlined' loading>
-                    Outlined
-                </Button>
-            </Stack>
-        </Stack>
-    );
-
     return (
         <>
             <Typography variant='h2'>Basic button</Typography>
@@ -113,6 +113,17 @@ export default Demo;`;
 };
 
 const IconSection = () => {
+    const preview = (
+        <Stack direction='row' spacing={2}>
+            <Button variant='outlined' startIcon={<Delete />}>
+                Delete
+            </Button>
+            <Button variant='contained' endIcon={<Send />}>
+                Send
+            </Button>
+        </Stack>
+    );
+
     const code = `import { Delete, Send } from '@mui/icons-material';
 import { Button, Stack } from '@mui/material';
 
@@ -130,17 +141,6 @@ const Demo = () => {
 };
     
 export default Demo;`;
-
-    const preview = (
-        <Stack direction='row' spacing={2}>
-            <Button variant='outlined' startIcon={<Delete />}>
-                Delete
-            </Button>
-            <Button variant='contained' endIcon={<Send />}>
-                Send
-            </Button>
-        </Stack>
-    );
 
     return (
         <>

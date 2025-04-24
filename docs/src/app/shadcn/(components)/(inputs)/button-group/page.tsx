@@ -13,6 +13,14 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <ButtonGroup variant='contained'>
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+        </ButtonGroup>
+    );
+
     const code = `import { Button, ButtonGroup } from '@mui/material';
 
 const Demo = () => {
@@ -27,14 +35,6 @@ const Demo = () => {
 
 export default Demo;`;
 
-    const preview = (
-        <ButtonGroup variant='contained'>
-            <Button>One</Button>
-            <Button>Two</Button>
-            <Button>Three</Button>
-        </ButtonGroup>
-    );
-
     return (
         <>
             <Typography variant='h2'>Basic button group</Typography>
@@ -48,6 +48,21 @@ export default Demo;`;
 };
 
 const VariantsSection = () => {
+    const preview = (
+        <Stack spacing={2} sx={{ alignItems: 'center' }}>
+            <ButtonGroup variant='outlined'>
+                <Button>One</Button>
+                <Button>Two</Button>
+                <Button>Three</Button>
+            </ButtonGroup>
+            <ButtonGroup variant='text'>
+                <Button>One</Button>
+                <Button>Two</Button>
+                <Button>Three</Button>
+            </ButtonGroup>
+        </Stack>
+    );
+
     const code = `import { Button, ButtonGroup, Stack } from '@mui/material';
 
 const Demo = () => {
@@ -69,21 +84,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack spacing={2} sx={{ alignItems: 'center' }}>
-            <ButtonGroup variant='outlined'>
-                <Button>One</Button>
-                <Button>Two</Button>
-                <Button>Three</Button>
-            </ButtonGroup>
-            <ButtonGroup variant='text'>
-                <Button>One</Button>
-                <Button>Two</Button>
-                <Button>Three</Button>
-            </ButtonGroup>
-        </Stack>
-    );
 
     return (
         <>

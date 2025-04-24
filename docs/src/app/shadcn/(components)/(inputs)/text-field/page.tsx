@@ -17,6 +17,14 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <Stack spacing={2}>
+            <TextField label='Outlined' variant='outlined' />
+            <TextField label='Filled' variant='filled' />
+            <TextField label='Standard' variant='standard' />
+        </Stack>
+    );
+
     const code = `import { Stack, TextField } from '@mui/material';
 
 const Demo = () => {
@@ -30,14 +38,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack spacing={2}>
-            <TextField label='Outlined' variant='outlined' />
-            <TextField label='Filled' variant='filled' />
-            <TextField label='Standard' variant='standard' />
-        </Stack>
-    );
 
     return (
         <>

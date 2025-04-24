@@ -16,6 +16,14 @@ const HeaderSection = () => {
 };
 
 const ImageSection = () => {
+    const preview = (
+        <Stack direction='row' spacing={2}>
+            <Avatar alt='Remy Sharp' src='https://api.dicebear.com/9.x/miniavs/svg?seed=Mason' />
+            <Avatar alt='Travis Howard' src='https://api.dicebear.com/9.x/miniavs/svg?seed=Sara' />
+            <Avatar alt='Cindy Baker' src='https://api.dicebear.com/9.x/miniavs/svg?seed=Riley' />
+        </Stack>
+    );
+
     const code = `import { Avatar, Stack } from '@mui/material';
 
 const Demo = () => {
@@ -29,14 +37,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack direction='row' spacing={2}>
-            <Avatar alt='Remy Sharp' src='https://api.dicebear.com/9.x/miniavs/svg?seed=Mason' />
-            <Avatar alt='Travis Howard' src='https://api.dicebear.com/9.x/miniavs/svg?seed=Sara' />
-            <Avatar alt='Cindy Baker' src='https://api.dicebear.com/9.x/miniavs/svg?seed=Riley' />
-        </Stack>
-    );
 
     return (
         <>
@@ -52,6 +52,14 @@ export default Demo;`;
 };
 
 const LetterSection = () => {
+    const preview = (
+        <Stack direction='row' spacing={2}>
+            <Avatar>H</Avatar>
+            <Avatar>N</Avatar>
+            <Avatar>OP</Avatar>
+        </Stack>
+    );
+
     const code = `import { Avatar, Stack } from '@mui/material';
 
 const Demo = () => {
@@ -65,14 +73,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack direction='row' spacing={2}>
-            <Avatar>H</Avatar>
-            <Avatar>N</Avatar>
-            <Avatar>OP</Avatar>
-        </Stack>
-    );
 
     return (
         <>

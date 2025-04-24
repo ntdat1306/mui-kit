@@ -24,6 +24,17 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <FormControl>
+            <FormLabel>Gender</FormLabel>
+            <RadioGroup defaultValue='female'>
+                <FormControlLabel value='female' control={<Radio />} label='Female' />
+                <FormControlLabel value='male' control={<Radio />} label='Male' />
+                <FormControlLabel value='other' control={<Radio />} label='Other' />
+            </RadioGroup>
+        </FormControl>
+    );
+
     const code = `import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
 
 const Demo = () => {
@@ -40,17 +51,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <FormControl>
-            <FormLabel>Gender</FormLabel>
-            <RadioGroup defaultValue='female'>
-                <FormControlLabel value='female' control={<Radio />} label='Female' />
-                <FormControlLabel value='male' control={<Radio />} label='Male' />
-                <FormControlLabel value='other' control={<Radio />} label='Other' />
-            </RadioGroup>
-        </FormControl>
-    );
 
     return (
         <>
@@ -66,6 +66,18 @@ export default Demo;`;
 };
 
 const DirectionSection = () => {
+    const preview = (
+        <FormControl>
+            <FormLabel>Gender</FormLabel>
+            <RadioGroup row>
+                <FormControlLabel value='female' control={<Radio />} label='Female' />
+                <FormControlLabel value='male' control={<Radio />} label='Male' />
+                <FormControlLabel value='other' control={<Radio />} label='Other' />
+                <FormControlLabel value='disabled' disabled control={<Radio />} label='other' />
+            </RadioGroup>
+        </FormControl>
+    );
+
     const code = `import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
 
 const Demo = () => {
@@ -83,18 +95,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <FormControl>
-            <FormLabel>Gender</FormLabel>
-            <RadioGroup row>
-                <FormControlLabel value='female' control={<Radio />} label='Female' />
-                <FormControlLabel value='male' control={<Radio />} label='Male' />
-                <FormControlLabel value='other' control={<Radio />} label='Other' />
-                <FormControlLabel value='disabled' disabled control={<Radio />} label='other' />
-            </RadioGroup>
-        </FormControl>
-    );
 
     return (
         <>

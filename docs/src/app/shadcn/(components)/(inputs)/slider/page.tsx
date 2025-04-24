@@ -13,6 +13,13 @@ const HeaderSection = () => {
 };
 
 const ContinuousSection = () => {
+    const preview = (
+        <Box sx={{ width: 200 }}>
+            <Slider defaultValue={50} valueLabelDisplay='off' />
+            <Slider defaultValue={30} valueLabelDisplay='off' disabled />
+        </Box>
+    );
+
     const code = `import { Box, Slider } from '@mui/material';
 
 const Demo = () => {
@@ -25,13 +32,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Box sx={{ width: 200 }}>
-            <Slider defaultValue={50} valueLabelDisplay='off' />
-            <Slider defaultValue={30} valueLabelDisplay='off' disabled />
-        </Box>
-    );
 
     return (
         <>

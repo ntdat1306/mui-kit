@@ -18,6 +18,15 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <>
+            <Checkbox defaultChecked />
+            <Checkbox />
+            <Checkbox disabled />
+            <Checkbox disabled checked />
+        </>
+    );
+
     const code = `import { Checkbox } from '@mui/material';
 
 const Demo = () => {
@@ -33,15 +42,6 @@ const Demo = () => {
 
 export default Demo;`;
 
-    const preview = (
-        <>
-            <Checkbox defaultChecked />
-            <Checkbox />
-            <Checkbox disabled />
-            <Checkbox disabled checked />
-        </>
-    );
-
     return (
         <>
             <Typography variant='h2'>Basic checkboxes</Typography>
@@ -52,6 +52,14 @@ export default Demo;`;
 };
 
 const LabelSection = () => {
+    const preview = (
+        <FormGroup>
+            <FormControlLabel control={<Checkbox defaultChecked />} label='Label' />
+            <FormControlLabel required control={<Checkbox />} label='Required' />
+            <FormControlLabel disabled control={<Checkbox />} label='Disabled' />
+        </FormGroup>
+    );
+
     const code = `import { Checkbox, FormControlLabel, FormGroup } from '@mui/material';
 
 const Demo = () => {
@@ -65,14 +73,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <FormGroup>
-            <FormControlLabel control={<Checkbox defaultChecked />} label='Label' />
-            <FormControlLabel required control={<Checkbox />} label='Required' />
-            <FormControlLabel disabled control={<Checkbox />} label='Disabled' />
-        </FormGroup>
-    );
 
     return (
         <>

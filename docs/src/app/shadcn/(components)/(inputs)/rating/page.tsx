@@ -19,6 +19,41 @@ const HeaderSection = () => {
 const BasicSection = () => {
     const [value, setValue] = useState<number | null>(2);
 
+    const preview = (
+        <Stack spacing={2}>
+            <Box>
+                <Typography component='legend'>Controlled</Typography>
+                <Rating
+                    value={value}
+                    onChange={(_, newValue) => {
+                        setValue(newValue);
+                    }}
+                />
+            </Box>
+            <Box>
+                <Typography component='legend'>Uncontrolled</Typography>
+                <Rating
+                    onChange={(_, newValue) => {
+                        console.log(newValue);
+                    }}
+                    defaultValue={2}
+                />
+            </Box>
+            <Box>
+                <Typography component='legend'>Read only</Typography>
+                <Rating value={value} readOnly />
+            </Box>
+            <Box>
+                <Typography component='legend'>Disabled</Typography>
+                <Rating value={value} disabled />
+            </Box>
+            <Box>
+                <Typography component='legend'>No rating given</Typography>
+                <Rating value={null} />
+            </Box>
+        </Stack>
+    );
+
     const code = `import { Box, Rating, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 
@@ -63,41 +98,6 @@ const Demo = () => {
 
 export default Demo;`;
 
-    const preview = (
-        <Stack spacing={2}>
-            <Box>
-                <Typography component='legend'>Controlled</Typography>
-                <Rating
-                    value={value}
-                    onChange={(_, newValue) => {
-                        setValue(newValue);
-                    }}
-                />
-            </Box>
-            <Box>
-                <Typography component='legend'>Uncontrolled</Typography>
-                <Rating
-                    onChange={(_, newValue) => {
-                        console.log(newValue);
-                    }}
-                    defaultValue={2}
-                />
-            </Box>
-            <Box>
-                <Typography component='legend'>Read only</Typography>
-                <Rating value={value} readOnly />
-            </Box>
-            <Box>
-                <Typography component='legend'>Disabled</Typography>
-                <Rating value={value} disabled />
-            </Box>
-            <Box>
-                <Typography component='legend'>No rating given</Typography>
-                <Rating value={null} />
-            </Box>
-        </Stack>
-    );
-
     return (
         <>
             <Typography variant='h2'>Basic rating</Typography>
@@ -108,6 +108,13 @@ export default Demo;`;
 };
 
 const PrecisionSection = () => {
+    const preview = (
+        <Stack spacing={1}>
+            <Rating defaultValue={2.5} precision={0.5} />
+            <Rating defaultValue={2.5} precision={0.5} readOnly />
+        </Stack>
+    );
+
     const code = `import { Rating, Stack } from '@mui/material';
 
 const Demo = () => {
@@ -120,13 +127,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack spacing={1}>
-            <Rating defaultValue={2.5} precision={0.5} />
-            <Rating defaultValue={2.5} precision={0.5} readOnly />
-        </Stack>
-    );
 
     return (
         <>

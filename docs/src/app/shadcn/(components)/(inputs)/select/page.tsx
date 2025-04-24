@@ -22,6 +22,37 @@ const BasicSection = () => {
         setAge(event.target.value as string);
     };
 
+    const preview = (
+        <Stack spacing={2}>
+            <FormControl size='small' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+
+            <FormControl size='small' variant='filled' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+
+            <FormControl size='small' variant='standard' sx={{ width: 256 }}>
+                <InputLabel>Age</InputLabel>
+                <Select value={age} onChange={handleChange} label='Age'>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+        </Stack>
+    );
+
     const code = `import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Stack } from '@mui/material';
 import { useState } from 'react';
 
@@ -65,37 +96,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack spacing={2}>
-            <FormControl size='small' sx={{ width: 256 }}>
-                <InputLabel>Age</InputLabel>
-                <Select value={age} onChange={handleChange} label='Age'>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-            </FormControl>
-
-            <FormControl size='small' variant='filled' sx={{ width: 256 }}>
-                <InputLabel>Age</InputLabel>
-                <Select value={age} onChange={handleChange} label='Age'>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-            </FormControl>
-
-            <FormControl size='small' variant='standard' sx={{ width: 256 }}>
-                <InputLabel>Age</InputLabel>
-                <Select value={age} onChange={handleChange} label='Age'>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-            </FormControl>
-        </Stack>
-    );
 
     return (
         <>

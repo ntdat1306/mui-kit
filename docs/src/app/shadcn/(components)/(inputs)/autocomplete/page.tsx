@@ -33,6 +33,29 @@ const HeaderSection = () => {
 };
 
 const ComboBoxSection = () => {
+    const preview = (
+        <Stack spacing={2}>
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 256 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='outlined' />}
+            />
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 256 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='filled' />}
+            />
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 256 }}
+                renderInput={(params) => <TextField {...params} label='Movie' variant='standard' />}
+            />
+        </Stack>
+    );
+
     const code = `import { Autocomplete, Stack, TextField, Typography } from '@mui/material';
 
 const Demo = () => {
@@ -61,29 +84,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack spacing={2}>
-            <Autocomplete
-                disablePortal
-                options={top100Films}
-                sx={{ width: 256 }}
-                renderInput={(params) => <TextField {...params} label='Movie' variant='outlined' />}
-            />
-            <Autocomplete
-                disablePortal
-                options={top100Films}
-                sx={{ width: 256 }}
-                renderInput={(params) => <TextField {...params} label='Movie' variant='filled' />}
-            />
-            <Autocomplete
-                disablePortal
-                options={top100Films}
-                sx={{ width: 256 }}
-                renderInput={(params) => <TextField {...params} label='Movie' variant='standard' />}
-            />
-        </Stack>
-    );
 
     return (
         <>

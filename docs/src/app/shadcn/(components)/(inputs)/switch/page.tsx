@@ -17,6 +17,15 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <Stack direction='row' spacing={2}>
+            <Switch defaultChecked />
+            <Switch />
+            <Switch disabled defaultChecked />
+            <Switch disabled />
+        </Stack>
+    );
+
     const code = `import { Stack, Switch } from '@mui/material';
 
 const Demo = () => {
@@ -31,15 +40,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack direction='row' spacing={2}>
-            <Switch defaultChecked />
-            <Switch />
-            <Switch disabled defaultChecked />
-            <Switch disabled />
-        </Stack>
-    );
 
     return (
         <>

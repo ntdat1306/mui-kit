@@ -15,6 +15,13 @@ const HeaderSection = () => {
 };
 
 const BasicSection = () => {
+    const preview = (
+        <Stack direction='row' spacing={1}>
+            <Chip label='Chip Filled' />
+            <Chip label='Chip Outlined' variant='outlined' />
+        </Stack>
+    );
+
     const code = `import { Chip, Stack } from '@mui/material';
 
 const Demo = () => {
@@ -27,13 +34,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <Stack direction='row' spacing={1}>
-            <Chip label='Chip Filled' />
-            <Chip label='Chip Outlined' variant='outlined' />
-        </Stack>
-    );
 
     return (
         <>

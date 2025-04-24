@@ -13,7 +13,7 @@ import {
     FormatUnderlined,
 } from '@mui/icons-material';
 import { ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
-import React, { MouseEvent, useState } from 'react';
+import { MouseEvent, useState } from 'react';
 
 const HeaderSection = () => {
     return (
@@ -35,6 +35,23 @@ const ExclusiveSection = () => {
     const handleAlignment = (_event: MouseEvent<HTMLElement>, newAlignment: string | null) => {
         setAlignment(newAlignment);
     };
+
+    const preview = (
+        <ToggleButtonGroup value={alignment} exclusive onChange={handleAlignment}>
+            <ToggleButton value='left' variant='outline'>
+                <FormatAlignLeft />
+            </ToggleButton>
+            <ToggleButton value='center'>
+                <FormatAlignCenter />
+            </ToggleButton>
+            <ToggleButton value='right'>
+                <FormatAlignRight />
+            </ToggleButton>
+            <ToggleButton value='justify' disabled>
+                <FormatAlignJustify />
+            </ToggleButton>
+        </ToggleButtonGroup>
+    );
 
     const code = `import { FormatAlignCenter, FormatAlignJustify, FormatAlignLeft, FormatAlignRight } from '@mui/icons-material';
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
@@ -67,23 +84,6 @@ const Demo = () => {
 
 export default Demo;`;
 
-    const preview = (
-        <ToggleButtonGroup value={alignment} exclusive onChange={handleAlignment}>
-            <ToggleButton value='left' variant='outline'>
-                <FormatAlignLeft />
-            </ToggleButton>
-            <ToggleButton value='center'>
-                <FormatAlignCenter />
-            </ToggleButton>
-            <ToggleButton value='right'>
-                <FormatAlignRight />
-            </ToggleButton>
-            <ToggleButton value='justify' disabled>
-                <FormatAlignJustify />
-            </ToggleButton>
-        </ToggleButtonGroup>
-    );
-
     return (
         <>
             <Typography variant='h2'>Exclusive selection</Typography>
@@ -103,6 +103,24 @@ const MultipleSection = () => {
     const handleFormat = (_event: MouseEvent<HTMLElement>, newFormats: string[]) => {
         setFormats(newFormats);
     };
+
+    const preview = (
+        <ToggleButtonGroup value={formats} onChange={handleFormat}>
+            <ToggleButton value='bold' variant='outline'>
+                <FormatBold />
+            </ToggleButton>
+            <ToggleButton value='italic'>
+                <FormatItalic />
+            </ToggleButton>
+            <ToggleButton value='underlined'>
+                <FormatUnderlined />
+            </ToggleButton>
+            <ToggleButton value='color' disabled>
+                <FormatColorFill />
+                <ArrowDropDown />
+            </ToggleButton>
+        </ToggleButtonGroup>
+    );
 
     const code = `import { ArrowDropDown, FormatBold, FormatColorFill, FormatItalic, FormatUnderlined } from '@mui/icons-material';
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
@@ -135,24 +153,6 @@ const Demo = () => {
 };
 
 export default Demo;`;
-
-    const preview = (
-        <ToggleButtonGroup value={formats} onChange={handleFormat}>
-            <ToggleButton value='bold' variant='outline'>
-                <FormatBold />
-            </ToggleButton>
-            <ToggleButton value='italic'>
-                <FormatItalic />
-            </ToggleButton>
-            <ToggleButton value='underlined'>
-                <FormatUnderlined />
-            </ToggleButton>
-            <ToggleButton value='color' disabled>
-                <FormatColorFill />
-                <ArrowDropDown />
-            </ToggleButton>
-        </ToggleButtonGroup>
-    );
 
     return (
         <>
