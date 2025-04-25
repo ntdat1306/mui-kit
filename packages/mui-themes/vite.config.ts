@@ -5,9 +5,7 @@ import dts from 'vite-plugin-dts';
 
 export default defineConfig({
     plugins: [
-        dts({
-            rollupTypes: true, // This bundles all `.d.ts` into a single file
-        }),
+        dts(), // Generate d.ts type file
         tsconfigPaths(), // Resolve alias
     ],
     build: {

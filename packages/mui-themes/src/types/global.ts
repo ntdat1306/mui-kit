@@ -1,4 +1,4 @@
-import { PaletteColorChannel } from './theme';
+import type { PaletteColorChannel } from '@mui/material';
 
 declare module '@mui/material/styles' {
     // Add a custom token to theme
