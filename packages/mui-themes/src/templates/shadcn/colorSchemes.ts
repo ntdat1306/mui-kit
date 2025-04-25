@@ -1,4 +1,10 @@
 import { CreateThemeOptions } from '@/types/theme';
+import { createTheme } from '@mui/material';
+
+const theme = createTheme({
+    // Theme customization goes here as usual, including tonalOffset and/or
+    // contrastThreshold as the augmentColor() function relies on these
+});
 
 const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
     light: {
@@ -6,9 +12,12 @@ const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
             primary: {
                 main: '#18181b',
             },
-            secondary: {
-                main: '#f4f4f5',
-            },
+            muted: theme.palette.augmentColor({
+                color: {
+                    main: '#f4f4f5',
+                },
+                name: 'muted',
+            }),
             background: {
                 default: '#ffffff',
             },
@@ -24,9 +33,12 @@ const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
             primary: {
                 main: '#fafafa',
             },
-            secondary: {
-                main: '#27272a',
-            },
+            muted: theme.palette.augmentColor({
+                color: {
+                    main: '#27272a',
+                },
+                name: 'muted',
+            }),
             background: {
                 default: '#09090b',
             },

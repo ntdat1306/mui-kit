@@ -23,7 +23,7 @@ const MuiTabs: MuiComponent<'MuiTabs'> = {
                         minHeight: 0,
                         padding: '0.25rem',
                         borderRadius: (theme.vars || theme).shape.borderRadius,
-                        backgroundColor: (theme.vars || theme).palette.secondary.main,
+                        backgroundColor: (theme.vars || theme).palette.muted.main,
                         [`& .${tabClasses.root}`]: {
                             minHeight: 0,
                             padding: '0.25rem 0.75rem',

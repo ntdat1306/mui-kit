@@ -86,7 +86,7 @@ const MuiTypography: MuiComponent<'MuiTypography'> = {
                         '& tr': {
                             borderTop: `1px solid ${(theme.vars || theme).palette.divider}`,
                             '&:nth-child(even)': {
-                                backgroundColor: (theme.vars || theme).palette.secondary.main,
+                                backgroundColor: (theme.vars || theme).palette.muted.main,
                             },
                             '& th, & td': {
                                 textAlign: 'left',
@@ -126,7 +126,7 @@ const MuiTypography: MuiComponent<'MuiTypography'> = {
                         lineHeight: '1.25rem',
                         borderRadius: '0.25rem',
                         padding: '0.2rem 0.3rem',
-                        backgroundColor: (theme.vars || theme).palette.secondary.main,
+                        backgroundColor: (theme.vars || theme).palette.muted.main,
                     },
                 },
                 {

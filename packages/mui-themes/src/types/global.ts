@@ -1,4 +1,7 @@
+import { PaletteColorChannel } from './theme';
+
 declare module '@mui/material/styles' {
+    // Add a custom token to theme
     interface Theme {
         customTokens: {
             shadow: {
@@ -21,6 +24,7 @@ declare module '@mui/material/styles' {
         };
     }
 
+    // Add a custom token to css variables
     interface ThemeVars {
         customTokens: {
             shadow: {
@@ -32,6 +36,19 @@ declare module '@mui/material/styles' {
         };
     }
 
+    /**
+     * Augment the palette to include a custom color
+     * Use PaletteColorChannel to use channel token in (theme.vars || theme).palette
+     */
+    interface Palette {
+        muted: Palette['primary'] & PaletteColorChannel;
+    }
+
+    interface PaletteOptions {
+        muted?: PaletteOptions['primary'];
+    }
+
+    // Add new variants to typography
     interface TypographyVariants {
         p: React.CSSProperties;
         list: React.CSSProperties;

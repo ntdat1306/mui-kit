@@ -9,12 +9,12 @@ const MuiToggleButton: MuiComponent<'MuiToggleButton'> = {
             border: '1px solid transparent',
             color: (theme.vars || theme).palette.text.primary,
             '&.Mui-selected': {
-                color: (theme.vars || theme).palette.secondary.contrastText,
-                backgroundColor: (theme.vars || theme).palette.secondary.main,
+                color: (theme.vars || theme).palette.muted.contrastText,
+                backgroundColor: (theme.vars || theme).palette.muted.main,
             },
             '&:hover': {
-                color: (theme.vars || theme).palette.secondary.contrastText,
-                backgroundColor: (theme.vars || theme).palette.secondary.main,
+                color: (theme.vars || theme).palette.muted.contrastText,
+                backgroundColor: (theme.vars || theme).palette.muted.main,
             },
             '&.Mui-disabled': {
                 opacity: 0.5,

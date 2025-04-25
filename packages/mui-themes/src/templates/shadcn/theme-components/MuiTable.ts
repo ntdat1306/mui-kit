@@ -37,8 +37,8 @@ const MuiTable: MuiComponent<'MuiTable'> = {
                     '& th, & td': {
                         fontWeight: 500,
                         fontSize: theme.typography.fontSize,
-                        color: (theme.vars || theme).palette.secondary.contrastText,
-                        backgroundColor: (theme.vars || theme).palette.secondary.main,
+                        color: (theme.vars || theme).palette.muted.contrastText,
+                        backgroundColor: `rgba(${(theme.vars || theme).palette.muted.mainChannel} / 0.5)`,
                         borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
                     },
                     '&:last-child td, &:last-child th': { border: 0 },
