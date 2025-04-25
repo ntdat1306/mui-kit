@@ -19,24 +19,24 @@ const HeaderSection = () => {
 
 const BasicSection = () => {
     const preview = (
-        <>
+        <div>
             <Checkbox defaultChecked />
             <Checkbox />
             <Checkbox disabled />
             <Checkbox disabled checked />
-        </>
+        </div>
     );
 
     const code = `import { Checkbox } from '@mui/material';
 
 const Demo = () => {
     return (
-        <>
+        <div>
             <Checkbox defaultChecked />
             <Checkbox />
             <Checkbox disabled />
             <Checkbox disabled checked />
-        </>
+        </div>
     );
 };
 

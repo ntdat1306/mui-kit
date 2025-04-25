@@ -1,7 +1,7 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { Divider, List, ListItem, ListItemText, Typography } from '@mui/material';
+import { Box, Card, Chip, Divider, List, ListItem, ListItemText, Stack, Typography } from '@mui/material';
 
 const HeaderSection = () => {
     return (
@@ -11,6 +11,84 @@ const HeaderSection = () => {
                 The Divider component provides a thin, unobtrusive line for grouping elements to reinforce visual
                 hierarchy.
             </Typography>
+        </>
+    );
+};
+
+const IntroductionSection = () => {
+    const preview = (
+        <Card variant='outlined' sx={{ maxWidth: 360 }}>
+            <Box sx={{ p: 2 }}>
+                <Stack direction='row' sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Typography gutterBottom variant='h5' component='div'>
+                        Toothbrush
+                    </Typography>
+                    <Typography gutterBottom variant='h6' component='div'>
+                        $4.50
+                    </Typography>
+                </Stack>
+                <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+                    Pinstriped cornflower blue cotton blouse takes you on a walk to the park or just down the hall.
+                </Typography>
+            </Box>
+            <Divider />
+            <Box sx={{ p: 2 }}>
+                <Typography gutterBottom variant='body2'>
+                    Select type
+                </Typography>
+                <Stack direction='row' spacing={1}>
+                    <Chip color='primary' label='Soft' size='small' />
+                    <Chip label='Medium' size='small' />
+                    <Chip label='Hard' size='small' />
+                </Stack>
+            </Box>
+        </Card>
+    );
+
+    const code = `import { Card, Box, Stack, Typography, Divider, Chip } from '@mui/material';
+
+const Demo = () => {
+    return (
+        <Card variant='outlined' sx={{ maxWidth: 360 }}>
+            <Box sx={{ p: 2 }}>
+                <Stack direction='row' sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Typography gutterBottom variant='h5' component='div'>
+                        Toothbrush
+                    </Typography>
+                    <Typography gutterBottom variant='h6' component='div'>
+                        $4.50
+                    </Typography>
+                </Stack>
+                <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+                    Pinstriped cornflower blue cotton blouse takes you on a walk to the park or just down the hall.
+                </Typography>
+            </Box>
+            <Divider />
+            <Box sx={{ p: 2 }}>
+                <Typography gutterBottom variant='body2'>
+                    Select type
+                </Typography>
+                <Stack direction='row' spacing={1}>
+                    <Chip color='primary' label='Soft' size='small' />
+                    <Chip label='Medium' size='small' />
+                    <Chip label='Hard' size='small' />
+                </Stack>
+            </Box>
+        </Card>
+    );
+};
+
+export default Demo;`;
+
+    return (
+        <>
+            <Typography variant='h2'>Introduction</Typography>
+            <Typography variant='p'>
+                The Material UI Divider component renders as a dark gray{' '}
+                <Typography variant='code'>{'<hr>'}</Typography> by default, and features several useful props for quick
+                style adjustments.
+            </Typography>
+            <PreviewCode preview={preview} code={code} />
         </>
     );
 };
@@ -99,6 +177,7 @@ const Page = () => {
     return (
         <>
             <HeaderSection />
+            <IntroductionSection />
             <BasicSection />
         </>
     );

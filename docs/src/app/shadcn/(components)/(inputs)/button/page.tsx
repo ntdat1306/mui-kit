@@ -1,7 +1,8 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { Delete, Send } from '@mui/icons-material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
 import { Button, Stack, Typography } from '@mui/material';
 
 const HeaderSection = () => {
@@ -115,25 +116,26 @@ export default Demo;`;
 const IconSection = () => {
     const preview = (
         <Stack direction='row' spacing={2}>
-            <Button variant='outlined' startIcon={<Delete />}>
+            <Button variant='outlined' startIcon={<DeleteIcon />}>
                 Delete
             </Button>
-            <Button variant='contained' endIcon={<Send />}>
+            <Button variant='contained' endIcon={<SendIcon />}>
                 Send
             </Button>
         </Stack>
     );
 
-    const code = `import { Delete, Send } from '@mui/icons-material';
+    const code = `import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
 import { Button, Stack } from '@mui/material';
 
 const Demo = () => {
     return (
         <Stack direction='row' spacing={2}>
-            <Button variant='outlined' startIcon={<Delete />}>
+            <Button variant='outlined' startIcon={<DeleteIcon />}>
                 Delete
             </Button>
-            <Button variant='contained' endIcon={<Send />}>
+            <Button variant='contained' endIcon={<SendIcon />}>
                 Send
             </Button>
         </Stack>

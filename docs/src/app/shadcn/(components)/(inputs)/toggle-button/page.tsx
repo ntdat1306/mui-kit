@@ -1,19 +1,18 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import {
-    ArrowDropDown,
-    FormatAlignCenter,
-    FormatAlignJustify,
-    FormatAlignLeft,
-    FormatAlignRight,
-    FormatBold,
-    FormatColorFill,
-    FormatItalic,
-    FormatUnderlined,
-} from '@mui/icons-material';
 import { ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
 import { MouseEvent, useState } from 'react';
+
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
+import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 
 const HeaderSection = () => {
     return (
@@ -39,21 +38,24 @@ const ExclusiveSection = () => {
     const preview = (
         <ToggleButtonGroup value={alignment} exclusive onChange={handleAlignment}>
             <ToggleButton value='left' variant='outline'>
-                <FormatAlignLeft />
+                <FormatAlignLeftIcon />
             </ToggleButton>
             <ToggleButton value='center'>
-                <FormatAlignCenter />
+                <FormatAlignCenterIcon />
             </ToggleButton>
             <ToggleButton value='right'>
-                <FormatAlignRight />
+                <FormatAlignRightIcon />
             </ToggleButton>
             <ToggleButton value='justify' disabled>
-                <FormatAlignJustify />
+                <FormatAlignJustifyIcon />
             </ToggleButton>
         </ToggleButtonGroup>
     );
 
-    const code = `import { FormatAlignCenter, FormatAlignJustify, FormatAlignLeft, FormatAlignRight } from '@mui/icons-material';
+    const code = `import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
+import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { MouseEvent, useState } from 'react';
 
@@ -67,16 +69,16 @@ const Demo = () => {
     return (
         <ToggleButtonGroup value={alignment} exclusive onChange={handleAlignment}>
             <ToggleButton value='left' variant='outline'>
-                <FormatAlignLeft />
+                <FormatAlignLeftIcon />
             </ToggleButton>
             <ToggleButton value='center'>
-                <FormatAlignCenter />
+                <FormatAlignCenterIcon />
             </ToggleButton>
             <ToggleButton value='right'>
-                <FormatAlignRight />
+                <FormatAlignRightIcon />
             </ToggleButton>
             <ToggleButton value='justify' disabled>
-                <FormatAlignJustify />
+                <FormatAlignJustifyIcon />
             </ToggleButton>
         </ToggleButtonGroup>
     );
@@ -107,22 +109,26 @@ const MultipleSection = () => {
     const preview = (
         <ToggleButtonGroup value={formats} onChange={handleFormat}>
             <ToggleButton value='bold' variant='outline'>
-                <FormatBold />
+                <FormatBoldIcon />
             </ToggleButton>
             <ToggleButton value='italic'>
-                <FormatItalic />
+                <FormatItalicIcon />
             </ToggleButton>
             <ToggleButton value='underlined'>
-                <FormatUnderlined />
+                <FormatUnderlinedIcon />
             </ToggleButton>
             <ToggleButton value='color' disabled>
-                <FormatColorFill />
-                <ArrowDropDown />
+                <FormatColorFillIcon />
+                <ArrowDropDownIcon />
             </ToggleButton>
         </ToggleButtonGroup>
     );
 
-    const code = `import { ArrowDropDown, FormatBold, FormatColorFill, FormatItalic, FormatUnderlined } from '@mui/icons-material';
+    const code = `import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { MouseEvent, useState } from 'react';
 
@@ -136,17 +142,17 @@ const Demo = () => {
     return (
         <ToggleButtonGroup value={formats} onChange={handleFormat}>
             <ToggleButton value='bold' variant='outline'>
-                <FormatBold />
+                <FormatBoldIcon />
             </ToggleButton>
             <ToggleButton value='italic'>
-                <FormatItalic />
+                <FormatItalicIcon />
             </ToggleButton>
             <ToggleButton value='underlined'>
-                <FormatUnderlined />
+                <FormatUnderlinedIcon />
             </ToggleButton>
             <ToggleButton value='color' disabled>
-                <FormatColorFill />
-                <ArrowDropDown />
+                <FormatColorFillIcon />
+                <ArrowDropDownIcon />
             </ToggleButton>
         </ToggleButtonGroup>
     );

@@ -1,7 +1,7 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { Close } from '@mui/icons-material';
+import CloseIcon from '@mui/icons-material/Close';
 import { Button, IconButton, Snackbar, SnackbarCloseReason, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
@@ -38,7 +38,7 @@ const IntroductionSection = () => {
                 UNDO
             </Button>
             <IconButton size='small' aria-label='close' color='inherit' onClick={handleClose}>
-                <Close fontSize='small' />
+                <CloseIcon fontSize='small' />
             </IconButton>
         </React.Fragment>
     );
@@ -57,7 +57,7 @@ const IntroductionSection = () => {
         </div>
     );
 
-    const code = `import { Close } from '@mui/icons-material';
+    const code = `import CloseIcon from '@mui/icons-material/Close';
 import { Button, IconButton, Snackbar, SnackbarCloseReason } from '@mui/material';
 import React, { useState } from 'react';
 
@@ -82,7 +82,7 @@ const Demo = () => {
                 UNDO
             </Button>
             <IconButton size='small' aria-label='close' color='inherit' onClick={handleClose}>
-                <Close fontSize='small' />
+                <CloseIcon fontSize='small' />
             </IconButton>
         </React.Fragment>
     );

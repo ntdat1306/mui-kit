@@ -1,7 +1,9 @@
 import { MuiComponent } from '@/types/theme';
 import {
     collapseClasses,
+    listItemAvatarClasses,
     listItemButtonClasses,
+    listItemClasses,
     listItemIconClasses,
     listItemTextClasses,
     listSubheaderClasses,
@@ -18,6 +20,19 @@ const MuiList: MuiComponent<'MuiList'> = {
                 display: 'flex',
                 alignItems: 'center',
             },
+            [`& .${listItemClasses.root}`]: {
+                padding: '0.5rem',
+                borderRadius: `calc(${(theme.vars || theme).shape.borderRadius} - 2px)`,
+                '&.Mui-selected': {
+                    color: (theme.vars || theme).palette.primary.main,
+                    [`& .${listItemIconClasses.root}`]: {
+                        color: 'inherit',
+                    },
+                },
+                [`&:has(.${listItemButtonClasses.root})`]: {
+                    padding: 0,
+                },
+            },
             [`& .${listItemButtonClasses.root}`]: {
                 padding: '0.5rem',
                 borderRadius: `calc(${(theme.vars || theme).shape.borderRadius} - 2px)`,
@@ -27,15 +42,15 @@ const MuiList: MuiComponent<'MuiList'> = {
                         color: 'inherit',
                     },
                 },
-                [`& .${listItemIconClasses.root}`]: {
-                    minWidth: 0,
-                    marginRight: '0.5rem',
-                },
-                [`& .${listItemTextClasses.root}`]: {
-                    margin: 0,
-                    [`& .${typographyClasses.root}`]: {
-                        lineHeight: '1.25rem',
-                    },
+            },
+            [`& .${listItemIconClasses.root}, & .${listItemAvatarClasses.root}`]: {
+                minWidth: 0,
+                marginRight: '0.5rem',
+            },
+            [`& .${listItemTextClasses.root}`]: {
+                margin: 0,
+                [`& .${typographyClasses.root}`]: {
+                    lineHeight: '1.25rem',
                 },
             },
             [`& .${collapseClasses.root}`]: {

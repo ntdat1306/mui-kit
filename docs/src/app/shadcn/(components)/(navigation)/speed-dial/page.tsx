@@ -1,7 +1,10 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { FileCopy, Print, Save, Share } from '@mui/icons-material';
+import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
+import PrintIcon from '@mui/icons-material/Print';
+import SaveIcon from '@mui/icons-material/Save';
+import ShareIcon from '@mui/icons-material/Share';
 import { Box, SpeedDial, SpeedDialAction, SpeedDialIcon, Typography } from '@mui/material';
 
 const HeaderSection = () => {
@@ -21,10 +24,10 @@ const HeaderSection = () => {
 
 const BasicSection = () => {
     const actions = [
-        { icon: <FileCopy />, name: 'Copy' },
-        { icon: <Save />, name: 'Save' },
-        { icon: <Print />, name: 'Print' },
-        { icon: <Share />, name: 'Share' },
+        { icon: <FileCopyIcon />, name: 'Copy' },
+        { icon: <SaveIcon />, name: 'Save' },
+        { icon: <PrintIcon />, name: 'Print' },
+        { icon: <ShareIcon />, name: 'Share' },
     ];
 
     const preview = (
@@ -41,15 +44,18 @@ const BasicSection = () => {
         </Box>
     );
 
-    const code = `import { FileCopy, Print, Save, Share } from '@mui/icons-material';
+    const code = `import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
+import PrintIcon from '@mui/icons-material/Print';
+import SaveIcon from '@mui/icons-material/Save';
+import ShareIcon from '@mui/icons-material/Share';
 import { Box, SpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material';
 
 const Demo = () => {
     const actions = [
-        { icon: <FileCopy />, name: 'Copy' },
-        { icon: <Save />, name: 'Save' },
-        { icon: <Print />, name: 'Print' },
-        { icon: <Share />, name: 'Share' },
+        { icon: <FileCopyIcon />, name: 'Copy' },
+        { icon: <SaveIcon />, name: 'Save' },
+        { icon: <PrintIcon />, name: 'Print' },
+        { icon: <ShareIcon />, name: 'Share' },
     ];
     
     return (

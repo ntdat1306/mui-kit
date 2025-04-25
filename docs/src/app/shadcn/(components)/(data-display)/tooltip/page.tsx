@@ -1,7 +1,7 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { Delete } from '@mui/icons-material';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { IconButton, Tooltip, Typography } from '@mui/material';
 
 const HeaderSection = () => {
@@ -19,19 +19,19 @@ const BasicSection = () => {
     const preview = (
         <Tooltip title='Delete'>
             <IconButton>
-                <Delete />
+                <DeleteIcon />
             </IconButton>
         </Tooltip>
     );
 
-    const code = `import { Delete } from '@mui/icons-material';
+    const code = `import DeleteIcon from '@mui/icons-material/Delete';
 import { IconButton, Tooltip } from '@mui/material';
 
 const Demo = () => {
     return (
         <Tooltip title='Delete'>
             <IconButton>
-                <Delete />
+                <DeleteIcon />
             </IconButton>
         </Tooltip>
     );

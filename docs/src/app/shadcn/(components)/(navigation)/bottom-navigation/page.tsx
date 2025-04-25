@@ -1,7 +1,9 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { Favorite, LocationOn, Restore } from '@mui/icons-material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import RestoreIcon from '@mui/icons-material/Restore';
 import { BottomNavigation, BottomNavigationAction, Typography } from '@mui/material';
 import { useState } from 'react';
 
@@ -32,13 +34,15 @@ const BasicSection = () => {
                 setValue(newValue);
             }}
         >
-            <BottomNavigationAction label='Recents' icon={<Restore />} />
-            <BottomNavigationAction label='Favorites' icon={<Favorite />} />
-            <BottomNavigationAction label='Nearby' icon={<LocationOn />} />
+            <BottomNavigationAction label='Recents' icon={<RestoreIcon />} />
+            <BottomNavigationAction label='Favorites' icon={<FavoriteIcon />} />
+            <BottomNavigationAction label='Nearby' icon={<LocationOnIcon />} />
         </BottomNavigation>
     );
 
-    const code = `import { Favorite, LocationOn, Restore } from '@mui/icons-material';
+    const code = `import FavoriteIcon from '@mui/icons-material/Favorite';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import RestoreIcon from '@mui/icons-material/Restore';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import { useState } from 'react';
 
@@ -53,9 +57,9 @@ const Demo = () => {
                 setValue(newValue);
             }}
         >
-            <BottomNavigationAction label='Recents' icon={<Restore />} />
-            <BottomNavigationAction label='Favorites' icon={<Favorite />} />
-            <BottomNavigationAction label='Nearby' icon={<LocationOn />} />
+            <BottomNavigationAction label='Recents' icon={<RestoreIcon />} />
+            <BottomNavigationAction label='Favorites' icon={<FavoriteIcon />} />
+            <BottomNavigationAction label='Nearby' icon={<LocationOnIcon />} />
         </BottomNavigation>
     );
 };

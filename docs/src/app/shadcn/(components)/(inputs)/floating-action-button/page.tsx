@@ -1,7 +1,9 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { Add, Edit, Favorite } from '@mui/icons-material';
+import AddIcon from '@mui/icons-material/Add';
+import EditIcon from '@mui/icons-material/Edit';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Fab, Stack, Typography } from '@mui/material';
 
 const HeaderSection = () => {
@@ -27,31 +29,33 @@ const BasicSection = () => {
     const preview = (
         <Stack direction='row' spacing={2}>
             <Fab color='primary' aria-label='add'>
-                <Add />
+                <AddIcon />
             </Fab>
             <Fab color='secondary' aria-label='edit'>
-                <Edit />
+                <EditIcon />
             </Fab>
             <Fab disabled aria-label='like'>
-                <Favorite />
+                <FavoriteIcon />
             </Fab>
         </Stack>
     );
 
-    const code = `import { Add, Edit, Favorite } from '@mui/icons-material';
+    const code = `import AddIcon from '@mui/icons-material/Add';
+import EditIcon from '@mui/icons-material/Edit';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Fab, Stack } from '@mui/material';
 
 const Demo = () => {
     return (
         <Stack direction='row' spacing={2}>
             <Fab color='primary' aria-label='add'>
-                <Add />
+                <AddIcon />
             </Fab>
             <Fab color='secondary' aria-label='edit'>
-                <Edit />
+                <EditIcon />
             </Fab>
             <Fab disabled aria-label='like'>
-                <Favorite />
+                <FavoriteIcon />
             </Fab>
         </Stack>
     );

@@ -12,6 +12,18 @@ const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
             primary: {
                 main: '#18181b',
             },
+            info: {
+                main: '#2563eb', // blue-600
+            },
+            success: {
+                main: '#16a34a', // green-600
+            },
+            warning: {
+                main: '#ca8a04', // yellow-600
+            },
+            error: {
+                main: '#dc2626', // red-600
+            },
             muted: theme.palette.augmentColor({
                 color: {
                     main: '#f4f4f5',
@@ -32,6 +44,18 @@ const themeColorSchemes: CreateThemeOptions['colorSchemes'] = {
         palette: {
             primary: {
                 main: '#fafafa',
+            },
+            info: {
+                main: '#60a5fa', // blue-400
+            },
+            success: {
+                main: '#4ade80', // green-400
+            },
+            warning: {
+                main: '#facc15', // yellow-400
+            },
+            error: {
+                main: '#f87171', // red-400
             },
             muted: theme.palette.augmentColor({
                 color: {

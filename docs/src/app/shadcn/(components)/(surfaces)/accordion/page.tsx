@@ -1,9 +1,9 @@
 'use client';
 
 import { PreviewCode } from '@/components/ui/PreviewCode';
-import { ArrowDownward, ArrowDropDown } from '@mui/icons-material';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
-import React from 'react';
 
 const HeaderSection = () => {
     return (
@@ -20,7 +20,7 @@ const IntroductionSection = () => {
     const preview = (
         <div>
             <Accordion>
-                <AccordionSummary expandIcon={<ArrowDownward />} aria-controls='panel1-content' id='panel1-header'>
+                <AccordionSummary expandIcon={<ArrowDownwardIcon />} aria-controls='panel1-content' id='panel1-header'>
                     <Typography component='span'>Accordion 1</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -32,7 +32,7 @@ const IntroductionSection = () => {
             </Accordion>
 
             <Accordion>
-                <AccordionSummary expandIcon={<ArrowDropDown />} aria-controls='panel2-content' id='panel2-header'>
+                <AccordionSummary expandIcon={<ArrowDropDownIcon />} aria-controls='panel2-content' id='panel2-header'>
                     <Typography component='span'>Accordion 2</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -44,7 +44,7 @@ const IntroductionSection = () => {
             </Accordion>
 
             <Accordion>
-                <AccordionSummary expandIcon={<ArrowDropDown />} aria-controls='panel2-content' id='panel2-header'>
+                <AccordionSummary expandIcon={<ArrowDropDownIcon />} aria-controls='panel2-content' id='panel2-header'>
                     <Typography component='span'>Accordion 3</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -56,7 +56,7 @@ const IntroductionSection = () => {
             </Accordion>
 
             <Accordion>
-                <AccordionSummary expandIcon={<ArrowDropDown />} aria-controls='panel2-content' id='panel2-header'>
+                <AccordionSummary expandIcon={<ArrowDropDownIcon />} aria-controls='panel2-content' id='panel2-header'>
                     <Typography component='span'>Accordion 4</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -69,14 +69,15 @@ const IntroductionSection = () => {
         </div>
     );
 
-    const code = `import { ArrowDownward, ArrowDropDown } from '@mui/icons-material';
+    const code = `import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 
 const Demo = () => {
     return (
         <div>
             <Accordion>
-                <AccordionSummary expandIcon={<ArrowDownward />} aria-controls='panel1-content' id='panel1-header'>
+                <AccordionSummary expandIcon={<ArrowDownwardIcon />}>
                     <Typography component='span'>Accordion 1</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -88,7 +89,7 @@ const Demo = () => {
             </Accordion>
 
             <Accordion>
-                <AccordionSummary expandIcon={<ArrowDropDown />} aria-controls='panel2-content' id='panel2-header'>
+                <AccordionSummary expandIcon={<ArrowDropDownIcon />}>
                     <Typography component='span'>Accordion 2</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -100,7 +101,7 @@ const Demo = () => {
             </Accordion>
 
             <Accordion>
-                <AccordionSummary expandIcon={<ArrowDropDown />} aria-controls='panel2-content' id='panel2-header'>
+                <AccordionSummary expandIcon={<ArrowDropDownIcon />}>
                     <Typography component='span'>Accordion 3</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -112,7 +113,7 @@ const Demo = () => {
             </Accordion>
 
             <Accordion>
-                <AccordionSummary expandIcon={<ArrowDropDown />} aria-controls='panel2-content' id='panel2-header'>
+                <AccordionSummary expandIcon={<ArrowDropDownIcon />}>
                     <Typography component='span'>Accordion 4</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
