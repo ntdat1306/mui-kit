@@ -1,7 +1,5 @@
 export {};
 
-export const triggerAugmentation = true;
-
 import type { PaletteColorChannel } from '@mui/material';
 
 declare module '@mui/material/styles' {

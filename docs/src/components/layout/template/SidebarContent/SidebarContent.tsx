@@ -11,6 +11,7 @@ import {
     ListItemText,
     ListSubheader,
     Stack,
+    typographyClasses,
 } from '@mui/material';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -106,7 +107,14 @@ const NestedList = ({ label, children, toggleMobileSidebar }: NestedListProps) =
                     {open ? <KeyboardArrowDown /> : <KeyboardArrowRight />}
                 </ListItemIcon>
 
-                <ListItemText primary={label} />
+                <ListItemText
+                    primary={label}
+                    sx={{
+                        [`& .${typographyClasses.root}`]: {
+                            fontWeight: 500,
+                        },
+                    }}
+                />
             </ListItemButton>
 
             <Collapse in={open} timeout='auto' unmountOnExit>
@@ -152,7 +160,9 @@ const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
                     ...(!toggleMobileSidebar && { borderRight: `1px solid ${(theme.vars || theme).palette.divider}` }),
                 })}
             >
-                <List disablePadding>{menu}</List>
+                <List disablePadding sx={{ padding: '0.25rem' }}>
+                    {menu}
+                </List>
             </Box>
         </Stack>
     );

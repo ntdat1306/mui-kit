@@ -6,6 +6,8 @@ import themeShadows from './shadows';
 import themeShape from './shape';
 import themeTypography from './typography';
 
+export {} from './declare';
+
 const shadcn: CreateThemeOptions = {
     shape: themeShape,
     shadows: themeShadows,
@@ -16,5 +18,3 @@ const shadcn: CreateThemeOptions = {
 };
 
 export default shadcn;
-
-export { triggerAugmentation } from './types';
