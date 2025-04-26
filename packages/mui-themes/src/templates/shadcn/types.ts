@@ -1,3 +1,5 @@
+export {};
+
 import type { PaletteColorChannel } from '@mui/material';
 
 declare module '@mui/material/styles' {
@@ -103,6 +105,3 @@ declare module '@mui/material/Tabs' {
         type?: 'contained' | 'outline';
     }
 }
-
-// Export here to re-export in index.ts file
-export {};

@@ -29,7 +29,6 @@ const MuiTypography: MuiComponent<'MuiTypography'> = {
                         paddingBottom: '0.5rem',
                         letterSpacing: '-0.025em',
                         borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
-
                         '&:first-child': {
                             marginTop: 0,
                         },
