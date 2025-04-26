@@ -8,7 +8,8 @@ import {
     DialogContent,
     DialogContentText,
     DialogTitle,
-    Typography
+    Link,
+    Typography,
 } from '@mui/material';
 import { useState } from 'react';
 
@@ -27,6 +28,32 @@ const HeaderSection = () => {
             </Typography>
             <Typography variant='p'>
                 Dialogs are purposefully interruptive, so they should be used sparingly.
+            </Typography>
+        </>
+    );
+};
+
+const IntroductionSection = () => {
+    return (
+        <>
+            <Typography variant='h2'>Introduction</Typography>
+            <Typography variant='p'>Dialogs are implemented using a collection of related components:</Typography>
+            <Typography variant='list'>
+                <li>Dialog: the parent component that renders the modal.</li>
+                <li>Dialog Title: a wrapper used for the title of a Dialog.</li>
+                <li>Dialog Actions: an optional container for a Dialog's Buttons.</li>
+                <li>Dialog Content: an optional container for displaying the Dialog's content.</li>
+                <li>
+                    Dialog Content Text: a wrapper for text inside of{' '}
+                    <Typography variant='code'>{'<DialogContent />'}</Typography>.
+                </li>
+                <li>
+                    Slide: optional{' '}
+                    <Link href='https://mui.com/material-ui/transitions/#slide' target='_blank'>
+                        Transition
+                    </Link>{' '}
+                    used to slide the Dialog in from the edge of the screen.
+                </li>
             </Typography>
         </>
     );
@@ -156,6 +183,7 @@ const Page = () => {
     return (
         <>
             <HeaderSection />
+            <IntroductionSection />
             <AlertsSection />
         </>
     );

@@ -24,7 +24,7 @@ const IntroductionSection = () => {
     );
 
     const code = `import CheckIcon from '@mui/icons-material/Check';
-import { Alert, Stack } from '@mui/material';
+import { Alert } from '@mui/material';
 
 const Demo = () => {
     return (
@@ -67,7 +67,7 @@ const BasicSection = () => {
 
 const SeveritySection = () => {
     const preview = (
-        <Stack spacing={2} sx={{ width: 256 }}>
+        <Stack spacing={2} sx={{ width: '100%' }}>
             <Alert severity='success'>This is a success Alert.</Alert>
             <Alert severity='info'>This is an info Alert.</Alert>
             <Alert severity='warning'>This is a warning Alert.</Alert>
@@ -79,7 +79,7 @@ const SeveritySection = () => {
 
 const Demo = () => {
     return (
-        <Stack spacing={2} sx={{ width: 256 }}>
+        <Stack spacing={2} sx={{ width: '100%' }}>
             <Alert severity='success'>This is a success Alert.</Alert>
             <Alert severity='info'>This is an info Alert.</Alert>
             <Alert severity='warning'>This is a warning Alert.</Alert>
@@ -104,6 +104,103 @@ export default Demo;`;
     );
 };
 
+const VariantsSection = () => {
+    const filledPreview = (
+        <Stack spacing={2} sx={{ width: '100%' }}>
+            <Alert variant='filled' severity='success'>
+                This is a filled success Alert.
+            </Alert>
+            <Alert variant='filled' severity='info'>
+                This is a filled info Alert.
+            </Alert>
+            <Alert variant='filled' severity='warning'>
+                This is a filled warning Alert.
+            </Alert>
+            <Alert variant='filled' severity='error'>
+                This is a filled error Alert.
+            </Alert>
+        </Stack>
+    );
+
+    const outlinedPreview = (
+        <Stack spacing={2} sx={{ width: '100%' }}>
+            <Alert variant='outlined' severity='success'>
+                This is an outlined success Alert.
+            </Alert>
+            <Alert variant='outlined' severity='info'>
+                This is an outlined info Alert.
+            </Alert>
+            <Alert variant='outlined' severity='warning'>
+                This is an outlined warning Alert.
+            </Alert>
+            <Alert variant='outlined' severity='error'>
+                This is an outlined error Alert.
+            </Alert>
+        </Stack>
+    );
+
+    const filledCode = `import { Alert, Stack } from '@mui/material';
+
+const Demo = () => {
+    return (
+        <Stack spacing={2} sx={{ width: '100%' }}>
+            <Alert variant='filled' severity='success'>
+                This is a filled success Alert.
+            </Alert>
+            <Alert variant='filled' severity='info'>
+                This is a filled info Alert.
+            </Alert>
+            <Alert variant='filled' severity='warning'>
+                This is a filled warning Alert.
+            </Alert>
+            <Alert variant='filled' severity='error'>
+                This is a filled error Alert.
+            </Alert>
+        </Stack>
+    );
+};
+
+export default Demo;`;
+
+    const outlinedCode = `import { Alert, Stack } from '@mui/material';
+
+const Demo = () => {
+    return (
+        <Stack spacing={2} sx={{ width: '100%' }}>
+            <Alert variant='outlined' severity='success'>
+                This is an outlined success Alert.
+            </Alert>
+            <Alert variant='outlined' severity='info'>
+                This is an outlined info Alert.
+            </Alert>
+            <Alert variant='outlined' severity='warning'>
+                This is an outlined warning Alert.
+            </Alert>
+            <Alert variant='outlined' severity='error'>
+                This is an outlined error Alert.
+            </Alert>
+        </Stack>
+    );
+};
+
+export default Demo;`;
+
+    return (
+        <>
+            <Typography variant='h3'>Variants</Typography>
+            <Typography variant='p'>
+                The Alert component comes with two alternative style options—
+                <Typography variant='code'>filled</Typography> and <Typography variant='code'>outlined</Typography>
+                —which you can set using the <Typography variant='code'>variant</Typography> prop.
+            </Typography>
+            <Typography variant='h4'>Filled</Typography>
+            <PreviewCode preview={filledPreview} code={filledCode} />
+            <Typography variant='h4'>Outlined</Typography>
+            <PreviewCode preview={outlinedPreview} code={outlinedCode} />
+        </>
+    );
+};
+
 const Page = () => {
     return (
         <>
@@ -111,6 +208,7 @@ const Page = () => {
             <IntroductionSection />
             <BasicSection />
             <SeveritySection />
+            <VariantsSection />
         </>
     );
 };

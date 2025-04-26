@@ -4,7 +4,6 @@ import themeComponents from './components';
 import themeCustomTokens from './customTokens';
 import themeShadows from './shadows';
 import themeShape from './shape';
-import { } from './types';
 import themeTypography from './typography';
 
 const shadcn: CreateThemeOptions = {
@@ -17,3 +16,5 @@ const shadcn: CreateThemeOptions = {
 };
 
 export default shadcn;
+
+export { triggerAugmentation } from './types';
