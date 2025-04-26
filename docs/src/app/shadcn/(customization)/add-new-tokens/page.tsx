@@ -47,7 +47,7 @@ const extendedTheme: CreateThemeOptions = {
     cssVariables: {
         colorSchemeSelector: 'class',
     },
-    // Whatever name of you want
+    // Whatever name you want
     newTokens: {
         first: 'valueFirst',
         second: 'valueSecond',
@@ -74,7 +74,7 @@ const extendedTheme: CreateThemeOptions = {
     cssVariables: {
         colorSchemeSelector: 'class',
     },
-    // Whatever name of you want
+    // Whatever name you want
     newTokens: {
         first: 'valueFirst',
         second: 'valueSecond',

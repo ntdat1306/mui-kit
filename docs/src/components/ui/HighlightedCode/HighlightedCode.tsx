@@ -29,44 +29,33 @@ const HighlightedCode = ({ code, fileName, canCopy = true }: HighlightedCodeProp
     );
 
     return (
-        <>
-            <Stack
-                direction='row'
-                alignItems='center'
-                justifyContent='space-between'
-                sx={{ marginBottom: '0.5rem', padding: '0 0.5rem' }}
-                component='div'
-            >
-                <Box sx={{ fontWeight: 500 }}>{fileName}</Box>
+        <Box sx={{ margin: '1.5rem 0' }}>
+            {fileName && <Box sx={{ fontWeight: 500, marginBottom: '0.5rem', padding: '0 0.5rem' }}>{fileName}</Box>}
 
-                {canCopy && (
-                    <Box
-                        onClick={handleCopy}
-                        sx={(theme) => ({
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            flexShrink: 0,
-                            width: 24,
-                            height: 24,
-                            '&:hover': {
-                                background: (theme.vars || theme).palette.action.hover,
-                                borderRadius: (theme.vars || theme).shape.borderRadius,
-                            },
-                        })}
-                    >
-                        {copied ? <TbCopyCheck /> : <TbCopy />}
-                    </Box>
-                )}
-            </Stack>
+            <Box sx={{ position: 'relative' }}>
+                <Box
+                    onClick={handleCopy}
+                    sx={{
+                        position: 'absolute',
+                        top: '1rem',
+                        right: '1rem',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: '#fafafa',
+                    }}
+                >
+                    {copied ? <TbCopyCheck /> : <TbCopy />}
+                </Box>
 
-            <Paper className='hljs' sx={{ maxHeight: 384, overflow: 'auto' }}>
-                <pre>
-                    <code className='hljs' dangerouslySetInnerHTML={{ __html: highlighted.value }}></code>
-                </pre>
-            </Paper>
-        </>
+                <Paper className='hljs' sx={{ maxHeight: 384, overflow: 'auto' }}>
+                    <pre>
+                        <code className='hljs' dangerouslySetInnerHTML={{ __html: highlighted.value }}></code>
+                    </pre>
+                </Paper>
+            </Box>
+        </Box>
     );
 };
 

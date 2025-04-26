@@ -1,3 +1,5 @@
+'use client';
+
 import { CreateThemeOptions, shadcn } from '@datstack/mui-themes';
 import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
@@ -28,6 +30,13 @@ const extendedTheme: CreateThemeOptions = {
             styleOverrides: {
                 fontSizeSmall: {
                     fontSize: '16px',
+                },
+            },
+        },
+        MuiLink: {
+            styleOverrides: {
+                root: {
+                    fontWeight: 500,
                 },
             },
         },

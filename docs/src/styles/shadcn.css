@@ -1,0 +1,13 @@
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--mui-palette-divider) transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--mui-palette-divider);
+}

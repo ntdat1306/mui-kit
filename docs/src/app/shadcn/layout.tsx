@@ -1,7 +1,6 @@
-'use client';
-
 import { TemplateLayout } from '@/components/layout/template/TemplateLayout';
 import { shadcnExtendTheme } from '@/lib/theme';
+import '@/styles/shadcn.css';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 
