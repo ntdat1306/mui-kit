@@ -36,14 +36,14 @@ const PreviewCode = ({ preview, code }: PreviewCodeProps) => {
     };
 
     return (
-        <div>
+        <>
             <Tabs value={value} onChange={handleChange} type='outline' sx={{ marginBottom: '1.25rem' }}>
                 <Tab value='preview' label='Preview' />
                 <Tab value='code' label='Code' />
             </Tabs>
 
             {type[value]}
-        </div>
+        </>
     );
 };
 

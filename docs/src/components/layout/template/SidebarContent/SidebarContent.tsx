@@ -57,20 +57,12 @@ const NestedList = ({ label, children, toggleMobileSidebar }: NestedListProps) =
     const router = useRouter();
     const pathname = usePathname();
 
-    const names = pathname.split('/');
-    const [prefix, suffix] = names.slice(-2);
-    const isMenuOpen = children.some((child) => child.menu.some((item) => item.slug === suffix));
+    const isMenuOpen = children.some((child) => child.menu.some((item) => pathname.endsWith(item.slug)));
 
     const [open, setOpen] = useState<boolean>(isMenuOpen);
 
-    /**
-     * /shadcn -> prefix = "", suffix = "shadcn"
-     * /shadcn/autocomplete -> prefix = "shadcn", suffix = "autocomplete"
-     */
     const handleNavigate = (slug: string) => {
-        const path = prefix ? names.slice(0, names.length - 1).join('/') : pathname;
-
-        router.push(`${path}/${slug}`);
+        router.push(`/shadcn/${slug}`);
 
         if (toggleMobileSidebar) {
             toggleMobileSidebar();
@@ -85,7 +77,7 @@ const NestedList = ({ label, children, toggleMobileSidebar }: NestedListProps) =
                 <NestedListItem
                     key={`${child.key}-${item.key}`}
                     item={item}
-                    selected={item.slug === suffix}
+                    selected={pathname.endsWith(item.slug)}
                     onClick={handleNavigate}
                 />
             ))}
@@ -125,9 +117,6 @@ const NestedList = ({ label, children, toggleMobileSidebar }: NestedListProps) =
 };
 
 const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
-    const pathname = usePathname();
-    const basePath = pathname.split('/')[1];
-
     const menu = sidebarItems.map((item) => (
         <NestedList {...item} toggleMobileSidebar={toggleMobileSidebar} key={item.key} />
     ));
@@ -146,7 +135,7 @@ const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
                     borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
                 })}
                 component={Link}
-                href={`/${basePath}`}
+                href='/shadcn'
             >
                 <ShadcnLogo fontSize={24} />
                 <Box sx={{ fontWeight: 700 }}>shadcn/ui</Box>

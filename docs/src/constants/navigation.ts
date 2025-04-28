@@ -29,6 +29,11 @@ export const sidebarItems: SidebarItem[] = [
                         label: 'Overview',
                         slug: 'overview',
                     },
+                    {
+                        key: 'installation',
+                        label: 'Installation',
+                        slug: 'installation',
+                    },
                 ],
             },
         ],
