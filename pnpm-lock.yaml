@@ -115,51 +115,6 @@ importers:
         specifier: ^5.1.4
         version: 5.1.4(typescript@5.8.3)(vite@6.3.2(@types/node@20.17.30))
 
-  packages/theme:
-    devDependencies:
-      '@emotion/react':
-        specifier: ^11.14.0
-        version: 11.14.0(@types/react@19.1.0)(react@19.1.0)
-      '@emotion/styled':
-        specifier: ^11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react@19.1.0)
-      '@mui/material':
-        specifier: ^7.0.2
-        version: 7.0.2(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      typescript:
-        specifier: ^5
-        version: 5.8.3
-
-  packages/themes:
-    devDependencies:
-      '@emotion/react':
-        specifier: ^11.14.0
-        version: 11.14.0(@types/react@19.1.0)(react@19.1.0)
-      '@emotion/styled':
-        specifier: ^11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react@19.1.0)
-      '@mui/material':
-        specifier: ^7.0.2
-        version: 7.0.2(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      typescript:
-        specifier: ^5
-        version: 5.8.3
-
-  packages/ui:
-    devDependencies:
-      '@emotion/react':
-        specifier: ^11.14.0
-        version: 11.14.0(@types/react@19.1.0)(react@19.1.0)
-      '@emotion/styled':
-        specifier: ^11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react@19.1.0)
-      '@mui/material':
-        specifier: ^7.0.2
-        version: 7.0.2(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      typescript:
-        specifier: ^5
-        version: 5.8.3
-
 packages:
 
   '@babel/code-frame@7.26.2':
