@@ -14,7 +14,7 @@
         "react-dom": "^19.0.0"
     },
     "devDependencies": {
-        "@datstack/mui-themes": "workspace:*",
+        "@datstack/mui-themes": "1.1.7",
         "@emotion/cache": "^11.14.0",
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.0",
