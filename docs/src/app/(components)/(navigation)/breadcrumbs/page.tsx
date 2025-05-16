@@ -22,7 +22,7 @@ const BasicSection = () => {
             <Link underline='hover' color='inherit' href='/'>
                 MUI
             </Link>
-            <Link underline='hover' color='inherit' href='/shadcn/breadcrumbs/'>
+            <Link underline='hover' color='inherit' href='/breadcrumbs/'>
                 Core
             </Link>
             <Typography sx={{ color: 'text.primary' }}>Breadcrumbs</Typography>
@@ -37,7 +37,7 @@ const Demo = () => {
             <Link underline='hover' color='inherit' href='/'>
                 MUI
             </Link>
-            <Link underline='hover' color='inherit' href='/shadcn/breadcrumbs/'>
+            <Link underline='hover' color='inherit' href='/breadcrumbs/'>
                 Core
             </Link>
             <Typography sx={{ color: 'text.primary' }}>Breadcrumbs</Typography>

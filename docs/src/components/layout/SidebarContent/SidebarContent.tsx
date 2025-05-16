@@ -62,7 +62,7 @@ const NestedList = ({ label, children, toggleMobileSidebar }: NestedListProps) =
     const [open, setOpen] = useState<boolean>(isMenuOpen);
 
     const handleNavigate = (slug: string) => {
-        router.push(`/shadcn/${slug}`);
+        router.push(`/${slug}`);
 
         if (toggleMobileSidebar) {
             toggleMobileSidebar();
@@ -135,7 +135,7 @@ const SidebarContent = ({ toggleMobileSidebar }: SidebarContentProps) => {
                     borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
                 })}
                 component={Link}
-                href='/shadcn'
+                href='/'
             >
                 <ShadcnLogo fontSize={24} />
                 <Box sx={{ fontWeight: 700 }}>shadcn/ui</Box>

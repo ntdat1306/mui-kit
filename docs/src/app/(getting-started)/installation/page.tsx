@@ -49,7 +49,7 @@ const ThemeSection = () => {
         <>
             <Typography variant='h2'>Theme installation</Typography>
             <Typography variant='p'>Install theme package in your project.</Typography>
-            <HighlightedCommand packageName='@datstack/mui-themes' />
+            <HighlightedCommand packageName='@datstack/mui-shadcn' />
         </>
     );
 };
@@ -59,12 +59,12 @@ const NextSection = () => {
         {
             label: 'React',
             logo: <ReactLogo fontSize={40} />,
-            slug: '/shadcn/usage-with-react',
+            slug: '/usage-with-react',
         },
         {
             label: 'Next.js',
             logo: <NextjsLogo fontSize={40} />,
-            slug: '/shadcn/usage-with-nextjs',
+            slug: '/usage-with-nextjs',
         },
     ];
 

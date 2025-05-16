@@ -12,7 +12,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
-            name: 'mui-themes',
+            name: 'mui-shadcn',
             formats: ['es', 'umd'],
             fileName: (format) => `index.${format}.js`,
         },

@@ -6,15 +6,15 @@ const Page = () => {
         <>
             <Typography variant='h1'>Overview</Typography>
             <Typography variant='p'>
-                Welcome to @datstack/mui-themes, a lightweight and customizable npm library designed to streamline
+                Welcome to @datstack/mui-shadcn, a lightweight and customizable npm library designed to streamline
                 theming for Material UI applications. Inspired by the sleek and modern component styling of Shadcn, this
                 library provides a pre-configured createTheme setup to effortlessly restyle all Material UI components
                 with a consistent, professional look and feel.
             </Typography>
 
-            <Typography variant='h2'>What is @datstack/mui-themes?</Typography>
+            <Typography variant='h2'>What is @datstack/mui-shadcn?</Typography>
             <Typography variant='p'>
-                @datstack/mui-themes is a theming solution built on top of Material UI's createTheme function. It offers
+                @datstack/mui-shadcn is a theming solution built on top of Material UI's createTheme function. It offers
                 a ready-to-use theme configuration that applies cohesive styles across all Material UI components,
                 ensuring a unified design system for your application. Whether you're building a new project or
                 upgrading an existing one, this library simplifies the process of achieving a polished, Shadcn-inspired

@@ -1,6 +1,6 @@
 'use client';
 
-import { CreateThemeOptions, shadcn } from '@datstack/mui-themes';
+import { CreateThemeOptions, shadcn } from '@datstack/mui-shadcn';
 import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 

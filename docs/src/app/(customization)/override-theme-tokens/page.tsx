@@ -5,7 +5,7 @@ import { Typography } from '@mui/material';
 import React from 'react';
 
 const content = {
-    lib: `import { CreateThemeOptions, shadcn } from '@datstack/mui-themes';
+    lib: `import { CreateThemeOptions, shadcn } from '@datstack/mui-shadcn';
 import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 

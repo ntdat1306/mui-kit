@@ -6,7 +6,7 @@ import React from 'react';
 
 const content = {
     lib: {
-        oneFile: `import { CreateThemeOptions, shadcn } from '@datstack/mui-themes';
+        oneFile: `import { CreateThemeOptions, shadcn } from '@datstack/mui-shadcn';
 import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 
@@ -56,7 +56,7 @@ const extendedTheme: CreateThemeOptions = {
 
 export const shadcnTheme = createTheme(deepmerge(mainTheme, extendedTheme));`,
         splitFile: {
-            theme: `import { CreateThemeOptions, shadcn } from '@datstack/mui-themes';
+            theme: `import { CreateThemeOptions, shadcn } from '@datstack/mui-shadcn';
 import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 

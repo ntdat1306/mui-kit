@@ -13,7 +13,7 @@ const HeaderSection = () => {
 };
 
 const ThemeSection = () => {
-    const code = `import { CreateThemeOptions, shadcn } from '@datstack/mui-themes';
+    const code = `import { CreateThemeOptions, shadcn } from '@datstack/mui-shadcn';
 import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 
